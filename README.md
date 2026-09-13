@@ -6,9 +6,6 @@ failure in UK Biobank. It compares PREVENT, refitted Cox regression, XGBoost,
 MLP, TabNet, NODE, FT-Transformer, SAINT, and a TabPFN-derived survival model
 under clinical-only, proteomic-only, and combined predictor configurations.
 
-Only protein panels selected by the repeated-split stability LassoNet procedure
-are used. Participant-level UK Biobank data and derived participant-level
-predictions are not distributed.
 
 ## Analysis workflow
 
@@ -99,5 +96,4 @@ view modelling arguments.
 
 UK Biobank data are available to approved researchers through the UK Biobank
 access process. Users must construct endpoint-specific input files under their
-own authorization. Do not commit `eid`, raw data, predictions, embeddings,
-checkpoints, Optuna databases, or licensed genetic summary data.
+own authorization.
