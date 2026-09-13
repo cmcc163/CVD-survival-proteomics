@@ -1,0 +1,59 @@
+# Local configuration
+config/paths.local.yml
+.env
+
+# Participant-level data and derived individual predictions
+data/
+private_data/
+artifacts/
+results/
+*.csv
+*.csv.gz
+*.tsv
+*.parquet
+*.feather
+*.xlsx
+*.xls
+*.sav
+
+# Models, embeddings, and optimization databases
+*.db
+*.sqlite
+*.ckpt
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# Generated figures and reports
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.svg
+*.pdf
+*.docx
+
+# Python and R runtime files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Keep explicitly documented synthetic/example inputs if added later.
+!examples/*.csv
+!examples/*.tsv
+

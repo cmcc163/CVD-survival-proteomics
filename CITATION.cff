@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated manuscript."
+title: "Plasma proteomics and deep survival learning to enhance PREVENT-based cardiovascular risk prediction"
+type: software
+authors:
+  - family-names: Cui
+    given-names: Miao
+  - family-names: Wei
+    given-names: Yongyue
+license: MIT
+repository-code: "https://github.com/cmcc163/CVD-survival-proteomics"

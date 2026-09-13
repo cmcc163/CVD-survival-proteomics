@@ -1,0 +1,13 @@
+# Copy this file to config/paths.local.yml and edit the paths locally.
+# paths.local.yml is ignored by Git.
+path: /secure/data/ASCVD/followup_incident.csv
+protein-path: /secure/panels/ASCVD/lassonet_protein.csv
+all-proteins-path: /secure/metadata/all_protein_names.csv
+reduced-panel-path: /secure/panels/ASCVD/reduced_panel.csv
+output-dir: ./results
+artifact-dir: ./artifacts
+
+# Outcome, predictor set, and model can also be fixed here for a single run.
+disease-type: ASCVD
+data-type: all
+model-name: SAINT

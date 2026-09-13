@@ -1,0 +1,35 @@
+name: cvd-survival
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.1
+  - pip
+  - numpy=1.26
+  - pandas=2.2
+  - scipy=1.13
+  - scikit-learn=1.5
+  - statsmodels=0.14
+  - requests=2.32
+  - matplotlib=3.9
+  - seaborn=0.13
+  - openpyxl=3.1
+  - pytest=8.3
+  - python-docx=1.1
+  - lifelines=0.29
+  - optuna=4.0
+  - xgboost=2.1
+  - pytorch=2.4
+  - pytorch-cuda=12.1
+  - pip:
+      - configargparse==1.7.1
+      - scikit-survival==0.23.0
+      - pytorch-tabnet==4.1.0
+      - qhoptim==1.1.0
+      - einops==0.8.0
+      - shap==0.46.0
+      - lassonet==0.0.20
+      - tabpfn>=2.0,<3
+      - tabpfn-extensions>=0.1,<0.2
+      - tqdm==4.66.5

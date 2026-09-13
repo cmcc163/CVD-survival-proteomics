@@ -1,0 +1,29 @@
+dataset: UKB
+objective: Survival
+direction: maximize
+
+# Reproducibility settings reported in the manuscript.
+seed: 221
+ratio: 0.10
+num-splits: 5
+n-trials: 100
+lassonet-repeats: 100
+lassonet-train-ratio: 0.70
+lassonet-selection-threshold: 0.80
+bootstrap-repeats: 1000
+
+# Training settings.
+use-gpu: true
+gpu-ids: [0]
+data-parallel: false
+scale: true
+target-encode: true
+one-hot-encode: false
+batch-size: 1024
+val-batch-size: 1024
+early-stopping-rounds: 20
+epochs: 1000
+logging-period: 100
+
+# Only the LassoNet-selected protein panels are used in the paper.
+protein-source: lassonet
