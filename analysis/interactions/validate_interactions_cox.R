@@ -31,13 +31,13 @@ time_col <- "time"
 event_col <- "Is_Incident"
 
 clinical_vars <- c(
-  "age", "sex", "ever_smoked", "Diabetes_baseline_1",
+  "age", "sex", "ever_smoked", "Diabetes_baseline",
   "Cholesterol_treatment", "hdl_cholesterol", "non_hdl_cholesterol",
-  "hypertension_treatment", "average_SBP", "eGFR_SCysC", "BMI"
+  "hypertension_treatment", "average_SBP", "eGFR", "BMI"
 )
 
 cat_vars <- c(
-  "sex", "ever_smoked", "Diabetes_baseline_1",
+  "sex", "ever_smoked", "Diabetes_baseline",
   "hypertension_treatment", "Cholesterol_treatment"
 )
 
@@ -367,7 +367,7 @@ write_methods_note <- function() {
     "- Clinical-clinical pair: 11 clinical variables + clinical:clinical interaction.",
     "- Protein-protein pair: 11 clinical variables + two protein main effects + protein:protein interaction.",
     "",
-    "The 11 clinical variables are age, sex, ever_smoked, Diabetes_baseline_1, Cholesterol_treatment, hdl_cholesterol, non_hdl_cholesterol, hypertension_treatment, average_SBP, eGFR_SCysC, and BMI.",
+    "The 11 clinical variables are age, sex, ever_smoked, Diabetes_baseline, Cholesterol_treatment, hdl_cholesterol, non_hdl_cholesterol, hypertension_treatment, average_SBP, eGFR, and BMI.",
     "Continuous clinical variables and proteins are standardized before constructing interaction terms. Categorical variables are label-encoded to follow the training preprocessing logic.",
     "Each interaction is fitted as a separate Cox model with complete-case data for the variables required by that model."
   )

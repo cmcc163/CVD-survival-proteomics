@@ -6,7 +6,9 @@ direction: maximize
 seed: 221
 ratio: 0.10
 num-splits: 5
-n-trials: 100
+# Completed studies contain either 20 or 100 trials. The exact count for each
+# published study is recorded in artifacts/manifest.json.
+n-trials: 20
 lassonet-repeats: 100
 lassonet-train-ratio: 0.70
 lassonet-selection-threshold: 0.80

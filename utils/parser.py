@@ -24,8 +24,8 @@ def get_parser() -> configargparse.ArgumentParser:
     """Return the publication pipeline parser.
 
     Command-line arguments override values read from the YAML configuration.
-    Each invocation operates on one outcome, predictor set, and model. Batch
-    execution is implemented by ``run.py batch`` rather than hard-coded loops.
+    Each invocation operates on one outcome, predictor set, and model. A shell
+    or workflow runner can call the CLI repeatedly for a prespecified grid.
     """
 
     parser = configargparse.ArgumentParser(
@@ -49,7 +49,7 @@ def get_parser() -> configargparse.ArgumentParser:
 
     parser.add("--ratio", type=float, default=0.10, help="European hold-out fraction.")
     parser.add("--num-splits", type=int, default=5)
-    parser.add("--n-trials", type=int, default=100)
+    parser.add("--n-trials", type=int, default=20)
     parser.add("--direction", choices=["maximize"], default="maximize")
     parser.add("--seed", type=int, default=221)
     parser.add("--shuffle", action=argparse.BooleanOptionalAction, default=True)

@@ -5,9 +5,7 @@ import datetime
 import json
 from pathlib import Path
 
-
-def _output_root(args):
-    return Path(getattr(args, "artifact_dir", "artifacts")) / "model_outputs"
+from utils.paths import canonical_output_path
 
 
 def save_loss_to_file(args, arr, name, extension=""):
@@ -122,18 +120,8 @@ def save_hyperparameters_to_file(args, params, results, time=None):
 
 
 def get_output_path(args, filename, file_type, directory=None, extension=None):
-    """Build an output path under the configured artifact directory."""
-    output_dir = _output_root(args)
-    if args.data_type == 'classic':
-        run_name = f"{args.dataset}_{args.disease_type}_{args.data_type}"
-    else:
-        run_name = f"{args.dataset}_{args.disease_type}_{args.data_type}_{args.protein_source}"
-    dir_path = output_dir / args.model_name / run_name
+    """Build a path in the canonical artifact layout and create its parent."""
 
-    if directory:
-        dir_path = dir_path / directory
-
-    dir_path.mkdir(parents=True, exist_ok=True)
-
-    suffix = f"_{extension}" if extension is not None else ""
-    return str(dir_path / f"{filename}{suffix}.{file_type}")
+    path = canonical_output_path(args, filename, file_type, directory, extension)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    return str(path)

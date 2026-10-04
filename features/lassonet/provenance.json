@@ -1,0 +1,29 @@
+{
+  "ASCVD": {
+    "source_type": "repeated-split LassoNet aggregate",
+    "n_repeats": 100,
+    "selection_threshold": 0.8,
+    "n_selected": 71,
+    "model_input_panel_size": 71,
+    "model_panel_currently_selected": 71,
+    "model_panel_matches_selection": true
+  },
+  "HF": {
+    "source_type": "repeated-split LassoNet aggregate",
+    "n_repeats": 100,
+    "selection_threshold": 0.8,
+    "n_selected": 69,
+    "model_input_panel_size": 69,
+    "model_panel_currently_selected": 69,
+    "model_panel_matches_selection": true
+  },
+  "Total_CVD": {
+    "source_type": "repeated-split LassoNet aggregate",
+    "n_repeats": 100,
+    "selection_threshold": 0.8,
+    "n_selected": 83,
+    "model_input_panel_size": 83,
+    "model_panel_currently_selected": 83,
+    "model_panel_matches_selection": true
+  }
+}

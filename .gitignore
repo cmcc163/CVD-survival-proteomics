@@ -16,7 +16,7 @@ results/
 *.xls
 *.sav
 
-# Models, embeddings, and optimization databases
+# Models, embeddings, and optimization databases are private by default.
 *.db
 *.sqlite
 *.ckpt
@@ -56,4 +56,22 @@ Thumbs.db
 # Keep explicitly documented synthetic/example inputs if added later.
 !examples/*.csv
 !examples/*.tsv
+!features/
+!features/**/*.csv
+!features/**/*.json
+!features/**/*.md
+
+# Curated publication artifacts are the only binary outputs allowed in Git.
+# These exceptions must remain after the global binary exclusions above.
+!artifacts/
+artifacts/*
+!artifacts/README.md
+!artifacts/manifest.json
+!artifacts/model_card.md
+!artifacts/models/
+!artifacts/models/**
+!artifacts/optuna/
+!artifacts/optuna/**
+!artifacts/rp_saint/
+!artifacts/rp_saint/**
 

@@ -1,0 +1,4848 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-03T14:37:13.808369+00:00",
+  "release_scope": {
+    "outcomes": [
+      "ASCVD",
+      "HF",
+      "Total_CVD"
+    ],
+    "algorithms": [
+      "LinearModel",
+      "XGBoost",
+      "MLP",
+      "TabNet",
+      "NODE",
+      "FT-Transformer",
+      "SAINT",
+      "TabPFN"
+    ],
+    "predictor_sets": [
+      "classic",
+      "protein_lassonet",
+      "all_lassonet"
+    ],
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "privacy_audit": {
+    "optuna_sqlite": {
+      "files": 72,
+      "tables": 936,
+      "rows": 32328
+    },
+    "model_binary_path_scan": {
+      "files": 360
+    },
+    "status": "passed",
+    "model_deserialization_performed": false
+  },
+  "quality_control": {
+    "accepted_optuna_trials_per_study": [20, 100],
+    "trial_count_variations": [
+      {
+        "outcome": "ASCVD",
+        "algorithm": "TabNet",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "TabNet",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "TabNet",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "NODE",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "NODE",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "NODE",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "SAINT",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "SAINT",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "ASCVD",
+        "algorithm": "SAINT",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "TabNet",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "TabNet",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "TabNet",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "NODE",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "NODE",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "NODE",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "SAINT",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "SAINT",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "HF",
+        "algorithm": "SAINT",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "TabNet",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "TabNet",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "TabNet",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "NODE",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "NODE",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "NODE",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "FT-Transformer",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "SAINT",
+        "predictor_set": "classic",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "SAINT",
+        "predictor_set": "protein_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      },
+      {
+        "outcome": "Total_CVD",
+        "algorithm": "SAINT",
+        "predictor_set": "all_lassonet",
+        "expected_trials": 100,
+        "observed_trials": 20
+      }
+    ]
+  },
+  "summary": {
+    "released_files": 432,
+    "released_bytes": 10795790955,
+    "missing_expected_files": 0,
+    "complete": true,
+    "release_ready": true
+  },
+  "files": [
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/all_lassonet/fold_0.pt",
+      "bytes": 3883014,
+      "sha256": "6ea1e3ddab04286cf1cdc16159375a1fa2cc5cc639a9dfe46a4f4624f5d34f32",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/all_lassonet/fold_1.pt",
+      "bytes": 3883014,
+      "sha256": "7834c28b458cceaf0b0be4e26e2fd0e26a13eacdcf59f421f5af82a88752f482",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/all_lassonet/fold_2.pt",
+      "bytes": 3883014,
+      "sha256": "657bee1a2745ee7219bd1d79f6ca96891a823602d5dde1154871749406a38a32",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/all_lassonet/fold_3.pt",
+      "bytes": 3883014,
+      "sha256": "4e06e73852849982e0f03f84247523e7f1b1d47beab96c8e0682c4fe747f6fdb",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/all_lassonet/fold_4.pt",
+      "bytes": 3883014,
+      "sha256": "f2b039d4bfde67d078e9708a38932460f49bba46e931cfe29e073405f1bdb4dd",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/classic/fold_0.pt",
+      "bytes": 959575,
+      "sha256": "1f5cc06e4c993efe07a9381f9d4bd5a94a09713a4a05e7e8cebfe9ced1771011",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/classic/fold_1.pt",
+      "bytes": 959575,
+      "sha256": "7372c70748a8012512cea26ca4b978be578aeca49beb336a19752dbdf3f645e6",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/classic/fold_2.pt",
+      "bytes": 959575,
+      "sha256": "bd7d600353999bca75660534406dce94e0d866e0f3c64033f75af4420799a0ad",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/classic/fold_3.pt",
+      "bytes": 959575,
+      "sha256": "108626d71209a6ff45303f6485a0bd2f44213341aecf1c318f064f17c534c26a",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/classic/fold_4.pt",
+      "bytes": 959575,
+      "sha256": "977af894140aac23af173321aa71a68b0fd1e56ccfd89575639747dc5290a4e1",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/protein_lassonet/fold_0.pt",
+      "bytes": 3905446,
+      "sha256": "11392b67fbed9f1ae05f35561b4d1a9ffbac5b2204c9b6864e9c7a5d86ec5051",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/protein_lassonet/fold_1.pt",
+      "bytes": 3905446,
+      "sha256": "bc9490924179df5682e107e0fc11ba1be1c2e2f35f52cc9e927c0af2d0062d5d",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/protein_lassonet/fold_2.pt",
+      "bytes": 3905446,
+      "sha256": "17af1e3233b9fca3d46e101987ed3c22fa7e58418efdfd5ca4f44b4274c739bd",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/protein_lassonet/fold_3.pt",
+      "bytes": 3905446,
+      "sha256": "cdcadef26bb9dba1991764b9d66315a80921df552485e1e3d4ac5cd389c4ff7f",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/FT-Transformer/protein_lassonet/fold_4.pt",
+      "bytes": 3905446,
+      "sha256": "2467b49fcb63758afa0f2a6db9a3a79ed31b38f07e7aa9ad0c273c2c63783130",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/all_lassonet/fold_0.pkl",
+      "bytes": 91355,
+      "sha256": "989d3e44627f127dcc1ac34c950c9b5069eb59a17ed63d7bd18a5dc96e300a7b",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/all_lassonet/fold_1.pkl",
+      "bytes": 93707,
+      "sha256": "5c30583bec05301d7f40178a694d831e77879ebd2ccf0b53b33f1b76af43780b",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/all_lassonet/fold_2.pkl",
+      "bytes": 92819,
+      "sha256": "783a35f44c4c0a93eba8e24b9337857dbc69707741a23e82c4645f40345cabc9",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/all_lassonet/fold_3.pkl",
+      "bytes": 92771,
+      "sha256": "95f6b9bd7f577134273ebd52706c04e981e4507c08ad8a3e74d0de0e4df14bd2",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/all_lassonet/fold_4.pkl",
+      "bytes": 92315,
+      "sha256": "7850c6da56e537df7e329176e0cb21665f6a233f2e7620de76ec684f679d2af2",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/classic/fold_0.pkl",
+      "bytes": 90213,
+      "sha256": "0e43628003e3e660a39f0d2cc8c2e79af06ebbf25f20cc975de10862c9ddaab1",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/classic/fold_1.pkl",
+      "bytes": 92565,
+      "sha256": "c5bbf9b6e404425c62d658733040a3b3415259cf20d6d16b073fe191b01c6888",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/classic/fold_2.pkl",
+      "bytes": 91677,
+      "sha256": "55df55b9de030ba2b207cdebf0783e9b9df24aa3cf2d500db14483fda053200c",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/classic/fold_3.pkl",
+      "bytes": 91629,
+      "sha256": "cfea330eda12901544a1fe6adc9583a8688e59a4633c51a96627fefd7d6509d3",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/classic/fold_4.pkl",
+      "bytes": 91173,
+      "sha256": "3817d57df9d6396b1c29791e4277145e84bc6c6774bb6e6518dd9118a1a7675f",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/protein_lassonet/fold_0.pkl",
+      "bytes": 91179,
+      "sha256": "99ce082986a9fe1c610afbf5d8714e3b76a9fb0b85b1d6e72a382adfd1a4ae24",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/protein_lassonet/fold_1.pkl",
+      "bytes": 93531,
+      "sha256": "9967695cae8ab7b510edc49d16f726cb21e146cb3ad90a0194e3db50d088c692",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/protein_lassonet/fold_2.pkl",
+      "bytes": 92643,
+      "sha256": "baa346f591d28c8a704da7fbea2ef784a903b3762f96981b5abbb2845143e0a5",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/protein_lassonet/fold_3.pkl",
+      "bytes": 92595,
+      "sha256": "dce14dc98327a7f7d544d1a9b80d7067a6312db4babc099769925ce45f024b60",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/LinearModel/protein_lassonet/fold_4.pkl",
+      "bytes": 92139,
+      "sha256": "94580c027415e0c8bd2c14512feaec64c3ddf97f2395616dc999c45f4c19ac5e",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/all_lassonet/fold_0.pt",
+      "bytes": 70301,
+      "sha256": "e8cae3db97a0d54dc9a65ee809757d54cc1e3bdb34225ceae1bedff821e674ac",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/all_lassonet/fold_1.pt",
+      "bytes": 70301,
+      "sha256": "446f4255beefaa4bd82c93f4791ffd92e41936d131fcc076ef3f3d5e80aec120",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/all_lassonet/fold_2.pt",
+      "bytes": 70301,
+      "sha256": "2561da9a93521da1927f37f2ee04a893638dfa22803ba241fb93a1b5629996c4",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/all_lassonet/fold_3.pt",
+      "bytes": 70301,
+      "sha256": "1cc02f3152a64f523b7badb1e1e02643c21e768beefc2ebb7e662402513d1b88",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/all_lassonet/fold_4.pt",
+      "bytes": 70301,
+      "sha256": "824c6d466ac965c9603cae859cf747d8ea61c3609a36eccf600916671d013f73",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/classic/fold_0.pt",
+      "bytes": 6181,
+      "sha256": "29829f672df4e50c9e4dea286cc2257462862c1d95f706b64dc338958f030b49",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/classic/fold_1.pt",
+      "bytes": 6181,
+      "sha256": "16ce8037081738e888656751dca5ed6f612e2d2c8ef73579aca02157950593c4",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/classic/fold_2.pt",
+      "bytes": 6181,
+      "sha256": "e972a9c7c0d1d69722693ac0957f3dd4cf97ad88ca533981bc033e178b4bb588",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/classic/fold_3.pt",
+      "bytes": 6181,
+      "sha256": "2afe1dcead14408987524f6ff0b4a6712c1e3ce1f6ccd6c38ca55f3d7946d151",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/classic/fold_4.pt",
+      "bytes": 6181,
+      "sha256": "63b580df33ed063ed2c40c3bb484b3219d8422320b1d2c7160e39e2f74ab8e34",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/protein_lassonet/fold_0.pt",
+      "bytes": 23133,
+      "sha256": "28129a5594a65a8ebeb4b4b86f0fb1ecb58541da202921fa2840f7119f66af72",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/protein_lassonet/fold_1.pt",
+      "bytes": 23133,
+      "sha256": "ccc004f89d9a1c05cbf6ae0a621522f615f22d28106a161e01504f25f8eef155",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/protein_lassonet/fold_2.pt",
+      "bytes": 23133,
+      "sha256": "d236d782b51683340855c376bd72d6a402b2e1d9a3177c801b7d1f976900740f",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/protein_lassonet/fold_3.pt",
+      "bytes": 23133,
+      "sha256": "91c91705def20dad3f935543129b57d27175c5a9c925478932604d3ee37bd989",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/MLP/protein_lassonet/fold_4.pt",
+      "bytes": 23133,
+      "sha256": "a5659b711ea73d138503dafd49fd15bf864ec9a6de8459df4d95aa5d5678121f",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/all_lassonet/fold_0.pt",
+      "bytes": 10598422,
+      "sha256": "d317241272286242d8db7ee5b12e93583de29f41ec62ceccb05d59a28778c9e2",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/all_lassonet/fold_1.pt",
+      "bytes": 10598422,
+      "sha256": "e1d6265eeabd185557ffa8beff7b8b78bea282bc6a4bce1bb590413902220e22",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/all_lassonet/fold_2.pt",
+      "bytes": 10598422,
+      "sha256": "60a2785cd6155b16317b593e12174c323f644c444f100516b61f41c7b7106f6f",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/all_lassonet/fold_3.pt",
+      "bytes": 10598422,
+      "sha256": "0249ec09c7b75f99ddb158abaff849dc80dbc5792154f2df5dffdd17598aec02",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/all_lassonet/fold_4.pt",
+      "bytes": 10598422,
+      "sha256": "471ffc7a9ce1f83b71bb5ba2e6d0990666debdebe0d3b1677ac9a4b6c61a6e2f",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/classic/fold_0.pt",
+      "bytes": 1409046,
+      "sha256": "81a28be9c0fc4aac14ce1435c23b72f5ff4626e3b87d6cad04a269d762d7a225",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/classic/fold_1.pt",
+      "bytes": 1409046,
+      "sha256": "33c319642d00be676250715f02292a3886a940173eb60ec4cb6a0fe3a9162e77",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/classic/fold_2.pt",
+      "bytes": 1409046,
+      "sha256": "c66c7bbca343e149823b1fbedac76eff5bf1c30b0c88576b338628370f92b0b5",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/classic/fold_3.pt",
+      "bytes": 1409046,
+      "sha256": "f9bed4630c319ffc0f4faf66d8251f6f750e089559658de049384a0749e3d8ee",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/classic/fold_4.pt",
+      "bytes": 1409046,
+      "sha256": "2ef918cab0fbda9ad826e612d4b2c19e9fea590709dd4ecbcf3426a7bcb2a821",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/protein_lassonet/fold_0.pt",
+      "bytes": 12930498,
+      "sha256": "04eda20cd21d945b5246a659c365a23f52b72a98f6f754c28b873d2ee7070319",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/protein_lassonet/fold_1.pt",
+      "bytes": 12930498,
+      "sha256": "6ae78cecc5a3769e1daf6ab7e8d92c2150153581601514a0cc479cbaf966f444",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/protein_lassonet/fold_2.pt",
+      "bytes": 12930498,
+      "sha256": "3ae4d468d5159b1520cf10a9fa5de6b3e5e57025aff1f6bd71ba629c28ac0a13",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/protein_lassonet/fold_3.pt",
+      "bytes": 12930498,
+      "sha256": "79ebf307be95c16c3d4db8006bb20fc7c1e42a99da2da18d817211d47d8b1a5e",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/NODE/protein_lassonet/fold_4.pt",
+      "bytes": 12930498,
+      "sha256": "7212373251a17522776d0cdaa1a3a26153c2e7d02fbbe599044ee5a88b66bcc7",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/all_lassonet/fold_0.pt",
+      "bytes": 1489253,
+      "sha256": "39450660e818473b9f2ff21dec2c99b82dfcdedc45821e96e078bbdd601ee553",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/all_lassonet/fold_1.pt",
+      "bytes": 1489253,
+      "sha256": "2e1a3d8138450c2b9f8f24cec93740ee5e47c6fb6020ba230bba3e85431eb04f",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/all_lassonet/fold_2.pt",
+      "bytes": 1489253,
+      "sha256": "c8e68f8b1896298450f943a942a3f7891790e71b04fc6212e415b1e7837a7f2f",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/all_lassonet/fold_3.pt",
+      "bytes": 1489253,
+      "sha256": "bea142ea9e94a1251b37b90308977cf717f4bf1b26467ac3df73e9510927867b",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/all_lassonet/fold_4.pt",
+      "bytes": 1489253,
+      "sha256": "47c196c23b707ff71fa862449206248ec7510bb869a40847dbaab0c828c6c522",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/classic/fold_0.pt",
+      "bytes": 30618482,
+      "sha256": "dde4d6aab2b6513ca5e57744599bc162c75e1b577ab1a149476f60e9c13ad53a",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/classic/fold_1.pt",
+      "bytes": 30618482,
+      "sha256": "18c0751a590799d009076ea46a88688d1b8bdc72cc3a33e58203d3a683b8e940",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/classic/fold_2.pt",
+      "bytes": 30618482,
+      "sha256": "18d32dd5e7697f42f71cfb8723a4ef653fa3f8dad51fa770a3347937027377b6",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/classic/fold_3.pt",
+      "bytes": 30618482,
+      "sha256": "b71222d860715b86ea2c3be8773a6e5d5e6e6c22ea341c321a6747e959e7fecf",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/classic/fold_4.pt",
+      "bytes": 30618482,
+      "sha256": "281d39014f95073729a3315a85179e30437a723dd93b485301cc37ffe43b7511",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/protein_lassonet/fold_0.pt",
+      "bytes": 260966999,
+      "sha256": "4cc2808f38ed99e749d7d13d6ff6663ef8d617e2be182b887e1012a2c2f3b867",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/protein_lassonet/fold_1.pt",
+      "bytes": 260966999,
+      "sha256": "a8b5979d2f523fb5ed0cbe4ffa4dc767c09ded9774b3e9aebd3c6ce0a7d207b4",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/protein_lassonet/fold_2.pt",
+      "bytes": 260966999,
+      "sha256": "bb8e6a71a46f6b6751f56d98adbadd9d2f3d2756f4844d1abdc8d976a3c0f8ee",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/protein_lassonet/fold_3.pt",
+      "bytes": 260966999,
+      "sha256": "e86e8cd3b7618ae3e01d0fb529bbdc52ae51086ad70f40cd9391ba55bebdc59e",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/SAINT/protein_lassonet/fold_4.pt",
+      "bytes": 260966999,
+      "sha256": "75b82b159901d464df85f3ae427b7f68ad8121539d814ee75cd25c60276f7a51",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/all_lassonet/fold_0.pkl",
+      "bytes": 5956112,
+      "sha256": "aff4424a7c0ca4427438e34ec07efb03b6e6dfe96878352d461553fb05a31261",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/all_lassonet/fold_1.pkl",
+      "bytes": 5956460,
+      "sha256": "f4442b56f499f2367a5f379fbe9991ebcdcfb28f5da13301c69951389bf4531c",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/all_lassonet/fold_2.pkl",
+      "bytes": 5956089,
+      "sha256": "ce87f8d3cdcfa1327d9296814a109e74b6f657aeb6c7f9ada87dd2a7dca5c3bd",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/all_lassonet/fold_3.pkl",
+      "bytes": 5956000,
+      "sha256": "66f53c1b326f9db957d924f7e39c0c1a128c258d13e94f769944a23da4e006f8",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/all_lassonet/fold_4.pkl",
+      "bytes": 5956367,
+      "sha256": "82aa9c692e701e0ab33887325093baa7d742b0e43a31d2a81dae7bbe1e2c082b",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/classic/fold_0.pkl",
+      "bytes": 817417,
+      "sha256": "a2823e2fcc9e321afd4e263270b311b508e019af7817d6dd4b1a0fbc9ccc9c76",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/classic/fold_1.pkl",
+      "bytes": 818054,
+      "sha256": "98f3d7469bade27ef9f4eb4be5c7ecc7645bcf5bf261f2bbe4a1faa2af11cb81",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/classic/fold_2.pkl",
+      "bytes": 818254,
+      "sha256": "f014be3ab02e09ac8fc3b539193d0a7569919af2b2e43180bc4bda9072e9ab0e",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/classic/fold_3.pkl",
+      "bytes": 817546,
+      "sha256": "f44943392dfdf86f77930978189e3f22346c60392f81f6b08c06cef93dca8c0a",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/classic/fold_4.pkl",
+      "bytes": 817553,
+      "sha256": "ea5534b647be4bdbadeaf7bd5d238bf278e09b40017fc4d8464f1d482685e177",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/protein_lassonet/fold_0.pkl",
+      "bytes": 2775952,
+      "sha256": "06bf1fd225b1d887adc892f49a78bfd7333794be8b7378ed8436f5f79eb85fbf",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/protein_lassonet/fold_1.pkl",
+      "bytes": 2775471,
+      "sha256": "8a4dd253cc831f398fa9285ae65d74cab977feaf3c968a9d6f2a00ce28d81ccc",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/protein_lassonet/fold_2.pkl",
+      "bytes": 2775299,
+      "sha256": "4071b50d266960a90e022a2940277d3d717d875643ed280a12dd585d68ce9c8c",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/protein_lassonet/fold_3.pkl",
+      "bytes": 2775299,
+      "sha256": "a8f4516303c5d79eb195d3216c0ad87d80863d5b5bd75a46ae85bf679a36aca7",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabNet/protein_lassonet/fold_4.pkl",
+      "bytes": 2775528,
+      "sha256": "a0e7ca7695fdf3509536629535262c4c2ab9967e4029e670879913710c1da209",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/all_lassonet/fold_0.pt",
+      "bytes": 135325,
+      "sha256": "4fefe230faa9e95520d310909636c42b9bb1b960eee3e421c708f2369b06d13b",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/all_lassonet/fold_1.pt",
+      "bytes": 135325,
+      "sha256": "b3097ffc65c745cb521002081a0623b13b471aa15412f67f3802e2851b1868a0",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/all_lassonet/fold_2.pt",
+      "bytes": 135325,
+      "sha256": "eb9b5ededf5ed87b340aeaefdb2e832c3eab905a7b8d510e2156140d85327f48",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/all_lassonet/fold_3.pt",
+      "bytes": 135325,
+      "sha256": "de04af2c8e890ae146e10afab7ed33119b2de4c5b3d0e5c0f55638e9a467e199",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/all_lassonet/fold_4.pt",
+      "bytes": 135325,
+      "sha256": "ba5ddfaaa2b3c2fad12bfff0f0a6f2230dd508e10b499880ca6249c1b8795fd6",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/classic/fold_0.pt",
+      "bytes": 84829,
+      "sha256": "198ba9536c5532a4f56ed8b93db75f60455e85e9e63f339b0384e325cf42a8f7",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/classic/fold_1.pt",
+      "bytes": 84829,
+      "sha256": "1e5be51dff3565a6ef41bd2f6cb27dcd62f74256bfea8b118718f30041efdca9",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/classic/fold_2.pt",
+      "bytes": 84829,
+      "sha256": "6c6673e590cbff32d730d8ef2b27f3144dae52351589da613c69a38c9c7a307e",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/classic/fold_3.pt",
+      "bytes": 84829,
+      "sha256": "3687b9fa9a730fe878115666ef677c10ef1c80de23a40029e828cbeb8f44057a",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/classic/fold_4.pt",
+      "bytes": 84829,
+      "sha256": "ba4da3dbce9878f695e664329254af94525a2fd8208c3fed8aaf24b70cc33234",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/protein_lassonet/fold_0.pt",
+      "bytes": 32481,
+      "sha256": "47edfa88107b2cd8dad73088deeb120d6147be10c26134494463e89deac9f02d",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/protein_lassonet/fold_1.pt",
+      "bytes": 32481,
+      "sha256": "55b1ef77e74b869ae9b6d1b7aaaf70e9569a723fe4d688b7bc6cb4340b8c8f58",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/protein_lassonet/fold_2.pt",
+      "bytes": 32481,
+      "sha256": "6faa5c4a0e51b89816b582fa075a0760e26a7a2dc7980559626d4df57fd593c5",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/protein_lassonet/fold_3.pt",
+      "bytes": 32481,
+      "sha256": "6277562427e46b5a630d3a349e2cf6761b1c9d286586bbbafe843b8bf6a447b7",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/TabPFN/protein_lassonet/fold_4.pt",
+      "bytes": 32481,
+      "sha256": "c47bde27c0b573e565ba5c7fb942a05eb76b40d6bdc88711d1a46ef3774b97ee",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/all_lassonet/fold_0.pkl",
+      "bytes": 950498,
+      "sha256": "c01c998360988ba704f5da0184388e1282b31ce6f1404f7664138a929a9452c8",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/all_lassonet/fold_1.pkl",
+      "bytes": 460519,
+      "sha256": "14eda0a8b77f63e5271dd9b92c0c0b5be3147dd5f5f75e16b79aa9204b963676",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/all_lassonet/fold_2.pkl",
+      "bytes": 922938,
+      "sha256": "fd48ccb87980e962443222ee882834129da12195083770711969e7f12436b25c",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/all_lassonet/fold_3.pkl",
+      "bytes": 1623846,
+      "sha256": "341b3aa7ac136ccd3c475b4f13c367cb1cf120eea9c36def0092b07c605e755a",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/all_lassonet/fold_4.pkl",
+      "bytes": 986854,
+      "sha256": "2bdcfb095d8d43f7ce25ba30b3d86bfbf9f0f29387b27022b79c8e70234fd9e5",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/classic/fold_0.pkl",
+      "bytes": 219368,
+      "sha256": "0fa453f46dbd829198e6d7feb95f1687d386fae50f16e46e2a2242d58bdb76b3",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/classic/fold_1.pkl",
+      "bytes": 932526,
+      "sha256": "88f427882ede03980032af5f19332546199a0c68ff450fa56dcf79dfdc36e0e6",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/classic/fold_2.pkl",
+      "bytes": 618689,
+      "sha256": "9e582fa57aebaff658b62527e1d012498a12a2e0443cde3c4b8004820774cfad",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/classic/fold_3.pkl",
+      "bytes": 466216,
+      "sha256": "3031885224ad107745de3142906dfc529f6b5ff02cd14f20b0e0237c877b804b",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/classic/fold_4.pkl",
+      "bytes": 591607,
+      "sha256": "007c81978c76ac3078f7617119d492be1fd450849618b8d70eae15f2892418bc",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/protein_lassonet/fold_0.pkl",
+      "bytes": 1116320,
+      "sha256": "a0b86e6f349c44425964c68b2837443e4f53c874ae9482fee04e33268c62fb52",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/protein_lassonet/fold_1.pkl",
+      "bytes": 2174617,
+      "sha256": "a39e21dae9663437a1d92de2dd9a7516ef37687e10b4beb308f4081477fc511b",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/protein_lassonet/fold_2.pkl",
+      "bytes": 1582140,
+      "sha256": "61500d0ffba38150a3a52ae7042beb87e1132bd4e9c16e0967a798796e7494ba",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/protein_lassonet/fold_3.pkl",
+      "bytes": 2152352,
+      "sha256": "af21fb8db3d9904ef756950bb628c1563bb65848894e27fde919eda07415e52a",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/ASCVD/XGBoost/protein_lassonet/fold_4.pkl",
+      "bytes": 1812696,
+      "sha256": "81f131dccf2ebc4237bd7ead86a1fa269f60b5054e265016daca362c8d05bb17",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/all_lassonet/fold_0.pt",
+      "bytes": 4022822,
+      "sha256": "0da949dc4c424bb385de960a289cabc4993073ae2d6440741cf0ad012091f0b9",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/all_lassonet/fold_1.pt",
+      "bytes": 4022822,
+      "sha256": "5966451328d3bf7828e8d5f37907b7abf8c5c88346a2dc6d03dd5d03d354be65",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/all_lassonet/fold_2.pt",
+      "bytes": 4022822,
+      "sha256": "5f055126365591f3737dca171d1a8acedc8308aaa5e1773a755e7eb656ba4eec",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/all_lassonet/fold_3.pt",
+      "bytes": 4022822,
+      "sha256": "a55782bb5bc884907d301d0e72a5e7f2acc4562eb542d5b543885b582b564e6a",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/all_lassonet/fold_4.pt",
+      "bytes": 4022822,
+      "sha256": "f65588957b75eaadd9a85252a37e46523cd792f7658f391e8cd945f1adb5686e",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/classic/fold_0.pt",
+      "bytes": 1523029,
+      "sha256": "d376c6d005d7173d8b2da8191953175ec8838632683f63a377b41f284d5b430c",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/classic/fold_1.pt",
+      "bytes": 1523029,
+      "sha256": "6ada6bcb147a68a5197b90b08b7a3346de94019ff1a6b120df73acffa888144f",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/classic/fold_2.pt",
+      "bytes": 1523029,
+      "sha256": "5470d7c8600dae9da70d89d90daffc091e1da06f002030f7e2867c4d40fa57a1",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/classic/fold_3.pt",
+      "bytes": 1523029,
+      "sha256": "ccb48733b4c2f060f362e0be6e02af7753f8d71ae18d88c8a1747efa4b67891e",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/classic/fold_4.pt",
+      "bytes": 1523029,
+      "sha256": "85ef0b27851f07dabb5a1e4710150ccdf4cf599edf4f499a61772fa4d258ec43",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/protein_lassonet/fold_0.pt",
+      "bytes": 3652038,
+      "sha256": "a35e1f7da874694366ba7d1ff1948007344605cfe7daa2eef91112157197939c",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/protein_lassonet/fold_1.pt",
+      "bytes": 3652038,
+      "sha256": "baa9a021fa81742d5cc106b801cd04d2f49b08a2094119b4cfd461ee92eef4af",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/protein_lassonet/fold_2.pt",
+      "bytes": 3652038,
+      "sha256": "28e0b7207926ff8a881ba98930875c479b3679b9332fd8854262d2ee01bce17f",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/protein_lassonet/fold_3.pt",
+      "bytes": 3652038,
+      "sha256": "9030c10e565f10cd6b203e197968d5fe7a3ae72d94d4495515f7b30d2c010dc4",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/FT-Transformer/protein_lassonet/fold_4.pt",
+      "bytes": 3652038,
+      "sha256": "793c60f89b3d34297096364e20cbfb404a0879c21b44342d6bb635a89c323359",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/all_lassonet/fold_0.pkl",
+      "bytes": 91491,
+      "sha256": "2b1981c5846036ce37c960ff744e0f83a7a3137a4553cd737bd66212c78676f6",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/all_lassonet/fold_1.pkl",
+      "bytes": 91467,
+      "sha256": "d00b5914f36023cd42493fa6c18329eb9402dd5bca8e5caa2659166778bed9c9",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/all_lassonet/fold_2.pkl",
+      "bytes": 91107,
+      "sha256": "4fc1dce8a66862d8a8f969ee8358675b526bf484c6a4e8b9e92788a82b665e42",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/all_lassonet/fold_3.pkl",
+      "bytes": 90627,
+      "sha256": "1d2b223051f3a7220457bb3f6545741fd951f242cf336a8226420fbf83003ca7",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/all_lassonet/fold_4.pkl",
+      "bytes": 90987,
+      "sha256": "cacf1c596dbbcdef3e4c35a4188fc6479c33f47a0f92fa3f70aa6bfdd979ffb7",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/classic/fold_0.pkl",
+      "bytes": 90381,
+      "sha256": "1909d362c9a319203f7deb62d2504816f7068a5cf6d86fc0ebd45f4afee738e2",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/classic/fold_1.pkl",
+      "bytes": 90357,
+      "sha256": "3763fd52a5ed65960ade0dbeb3a30b5e9fa199ea0dab1768e54047c864208943",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/classic/fold_2.pkl",
+      "bytes": 89997,
+      "sha256": "d01955b46d759d8c637eb2a4ee0c1f21cf8c0a7861e922563bf71743a8def714",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/classic/fold_3.pkl",
+      "bytes": 89517,
+      "sha256": "682e51b2de93c8876205054c2effa2dee83d0044668156d176e0ae7d0354953e",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/classic/fold_4.pkl",
+      "bytes": 89877,
+      "sha256": "1c438d3d82f40da39c10752a8c4e964ea6faa32abd6e5b6242c9ec22d3de1fdb",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/protein_lassonet/fold_0.pkl",
+      "bytes": 91315,
+      "sha256": "9aee8193d0bc4e4cd1d26afa7ad45cd9a7dd87383cc9abbc77a127f02f9242a0",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/protein_lassonet/fold_1.pkl",
+      "bytes": 91291,
+      "sha256": "098be7e0c022a93676b4bebd7212ed7180c2c49cdde04d8d3046ba7256f30fa5",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/protein_lassonet/fold_2.pkl",
+      "bytes": 90931,
+      "sha256": "1621eca0abcc7a7c48ec6b9706b25d26ab27781ac86ebe116466b6a626d77955",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/protein_lassonet/fold_3.pkl",
+      "bytes": 90451,
+      "sha256": "babf8023207a8add7903e66b1efa5e5cd61d092f69e8d4c5915d19f5c7c191fe",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/LinearModel/protein_lassonet/fold_4.pkl",
+      "bytes": 90811,
+      "sha256": "e2e50aa08b7341325628b9dec7743f6b2bde946f54fdcd85e67565a9d9fe4ecc",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/all_lassonet/fold_0.pt",
+      "bytes": 33707,
+      "sha256": "60a8e22b82f51c6bbe0f9dd151e868423815594a8ae5bea844b64bd92c5eccf4",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/all_lassonet/fold_1.pt",
+      "bytes": 33707,
+      "sha256": "b0dd8a4df3f54c5a89ab877642451fcb9dba05dea063fd5f117eefce753e52d8",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/all_lassonet/fold_2.pt",
+      "bytes": 33707,
+      "sha256": "372a2a082d6046c2124675efbcc7fa595b78670955ae7927d74e8d57c6b95f9a",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/all_lassonet/fold_3.pt",
+      "bytes": 33707,
+      "sha256": "1ee0f62b1efbea6adc007dfdea043d8ed269028b517b27b66bb38cc3032c8114",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/all_lassonet/fold_4.pt",
+      "bytes": 33707,
+      "sha256": "5681285198d326afbd64138d1e0c28c574ed44dabe711bc72cba08893cc8c28f",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/classic/fold_0.pt",
+      "bytes": 7197,
+      "sha256": "636fd60aa1b1cb54c8cd41bbbd62b58b0baa2b5163d5778b9599a91ab658f39e",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/classic/fold_1.pt",
+      "bytes": 7197,
+      "sha256": "a857ca8dd29e0a737340ff5dcaf90be3f9673c910cab1682cf2c4e48abb1989d",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/classic/fold_2.pt",
+      "bytes": 7197,
+      "sha256": "aa3e4a0614996d41484edcbb3fc733110a154c15e6c7742ebb3662d634daf25c",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/classic/fold_3.pt",
+      "bytes": 7197,
+      "sha256": "8f002beb97366edc757a1fe1f735ae50ced933511ec63e3d80ce60878ff07101",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/classic/fold_4.pt",
+      "bytes": 7197,
+      "sha256": "bb9789857804fa5af0af3dc3df2b18258b26fdec72a5b1bc38022cb6eb9ebab8",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/protein_lassonet/fold_0.pt",
+      "bytes": 26909,
+      "sha256": "1d80e5dbbb4dd7241a2c3f823149bc1bfe1c2934fa828befc9f326bb7f1fbef8",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/protein_lassonet/fold_1.pt",
+      "bytes": 26909,
+      "sha256": "9dbee7d026f42ef87b26e80907270841cde1f739229c14d636edbf6e1c8a0e14",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/protein_lassonet/fold_2.pt",
+      "bytes": 26909,
+      "sha256": "3812d434b56774cf2dfa384baac9dcabaea887000c86b8cc9b341fff3925a77f",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/protein_lassonet/fold_3.pt",
+      "bytes": 26909,
+      "sha256": "75e7b2098dc52581ac5f5ece9be9a9b8b59e0030eb2fb3eaefca60ebbe37eb11",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/MLP/protein_lassonet/fold_4.pt",
+      "bytes": 26909,
+      "sha256": "4caa81fba913cb2332c3c93e942e8938637cdd322dffa6452b08719f340181cd",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/all_lassonet/fold_0.pt",
+      "bytes": 2689474,
+      "sha256": "7f658017c649437fae870d5a0c662c1c659b9bbbbb7a713e8965cda8216a216e",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/all_lassonet/fold_1.pt",
+      "bytes": 2689474,
+      "sha256": "bfac7d22b42a9845e1daa2cd35bf7f74d4765b9c39978ae19f5bca0bdcc42f4d",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/all_lassonet/fold_2.pt",
+      "bytes": 2689474,
+      "sha256": "b07bd1addf275c4480c97e95a7b5956789b18362d0599f941bf02d69ae715962",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/all_lassonet/fold_3.pt",
+      "bytes": 2689474,
+      "sha256": "e14026cdad17af6392feba137aa01a06bf71af6174a9bcfc42e0a3c087b7bc1e",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/all_lassonet/fold_4.pt",
+      "bytes": 2689474,
+      "sha256": "46553c207b4635cda5c7ed72031f8d1baae92ead0eca2da3b945430de873cf24",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/classic/fold_0.pt",
+      "bytes": 1766978,
+      "sha256": "ba5b568a6976a698eebaa338a87ccd13e48c82f661e8614f98a385df74458f4e",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/classic/fold_1.pt",
+      "bytes": 1766978,
+      "sha256": "377ae6999ae4c979fbb45c8d4a7a00616d8e2d48527c95cd384a616f61f4a82a",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/classic/fold_2.pt",
+      "bytes": 1766978,
+      "sha256": "16af94eeebfe0f30721e050b455a161a9ff20c8580fd7bacd52e82fbc329a2a6",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/classic/fold_3.pt",
+      "bytes": 1766978,
+      "sha256": "7d8360eb88d07320b6bbbc88c70f662b1ce2b9a14625f1dc9993f9ae611264db",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/classic/fold_4.pt",
+      "bytes": 1766978,
+      "sha256": "3e5d0c48685756e2f6b58045b5dd174ec8a097165d707c4954d1d0aee5c81029",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/protein_lassonet/fold_0.pt",
+      "bytes": 4076994,
+      "sha256": "d875ba8651ef70872c29c0e46025ed1c9a3df4128f8f604b25f65281a624dae8",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/protein_lassonet/fold_1.pt",
+      "bytes": 4076994,
+      "sha256": "8cdca5be54a86c21a8c81ad6bfc96a5b2519f804e5807b1e367c29deefc6b121",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/protein_lassonet/fold_2.pt",
+      "bytes": 4076994,
+      "sha256": "34196df95b39231a723c0afc6dbdf6d3d58006abe1e2e0e7983653dc3fd852e7",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/protein_lassonet/fold_3.pt",
+      "bytes": 4076994,
+      "sha256": "38bd51d1fb0594230c710082c4da16b80ff33317ffbba87b45c08dd511724a4c",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/NODE/protein_lassonet/fold_4.pt",
+      "bytes": 4076994,
+      "sha256": "c0ff28c6aefc4f3c2682196ddee9f68701d04dd1bf2a11725198c2c96dbf18c6",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/all_lassonet/fold_0.pt",
+      "bytes": 2684965,
+      "sha256": "b005d9f68fd6754568513eb6adc1dbd3d3ec7efa4f8cc134dc776e466f0743c7",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/all_lassonet/fold_1.pt",
+      "bytes": 2684965,
+      "sha256": "6091b34a5a7817d2072bddd7ed804b03827a8c75ad817d958c7b68bcd89b72ca",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/all_lassonet/fold_2.pt",
+      "bytes": 2684965,
+      "sha256": "1e00321b430d4168dd4719f1d7436c597943f7220cef374caa93af65e84fcd85",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/all_lassonet/fold_3.pt",
+      "bytes": 2684965,
+      "sha256": "8f198e7349a5db459cceee886c8e0a2b3a897a30c623640f8654ee40102a0498",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/all_lassonet/fold_4.pt",
+      "bytes": 2684965,
+      "sha256": "30be75dbe438ba6fd4b8f4229386e5575a50269779ddbef88430aed9aa4673dc",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/classic/fold_0.pt",
+      "bytes": 3539890,
+      "sha256": "2938ced43d713f60e5c7e7aaa3cf78d0e0e9d7d040cfaeaf6e71e91f96c99c54",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/classic/fold_1.pt",
+      "bytes": 3539890,
+      "sha256": "4f4fe0764d23ef9f15b94bd39946e8c6f5f87af4c8688437b3d9e767e3e957f1",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/classic/fold_2.pt",
+      "bytes": 3539890,
+      "sha256": "09f6e687d787f7de27061be73742264dedbe17f315f53f2683354878f167d866",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/classic/fold_3.pt",
+      "bytes": 3539890,
+      "sha256": "463d0d28e3c96c7c8a05fa05f9610658e6c5382737484d9d1e8fa3d6ab7bd082",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/classic/fold_4.pt",
+      "bytes": 3539890,
+      "sha256": "94cb64a31ac3e2d22b6a900fd3bb63469380275e794dd0e7f04dd02bf1659682",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/protein_lassonet/fold_0.pt",
+      "bytes": 260653943,
+      "sha256": "5780c7d58d95f779a6c51d2b2e1be980b17914b34164b9159114fa27cfb7e044",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/protein_lassonet/fold_1.pt",
+      "bytes": 260653943,
+      "sha256": "3f3b74440a248c820d7a6305750d1f6ed7d00d03252a2e94dca398e857f91df7",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/protein_lassonet/fold_2.pt",
+      "bytes": 260653943,
+      "sha256": "d4bc0c5fca323661b6953f75d500b6029e18e28b29848a169468058a78008c2e",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/protein_lassonet/fold_3.pt",
+      "bytes": 260653943,
+      "sha256": "4dafbffdc1a4e933fb604625aebd8d58103524fd65fe16fbf0f9131a1597bf53",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/SAINT/protein_lassonet/fold_4.pt",
+      "bytes": 260653943,
+      "sha256": "0fde94cb75c588f76dd1c9b575da402a408db0fdbda5eb0cda7ed028b3ae4fda",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/all_lassonet/fold_0.pkl",
+      "bytes": 1124194,
+      "sha256": "7d3eefb5c591b26fead342083b25ae449abc0a2181d7af07bbd21a24b9e0db80",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/all_lassonet/fold_1.pkl",
+      "bytes": 1124225,
+      "sha256": "6c8f8afcc71a56b839153afd81e0b5066e399c56c2b85214f5e081becebf25bd",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/all_lassonet/fold_2.pkl",
+      "bytes": 1125006,
+      "sha256": "a44cef124ee75e3472ab0a552e2a5ffa6c0e94f2bcde6fbd30a8187a39977eff",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/all_lassonet/fold_3.pkl",
+      "bytes": 1123530,
+      "sha256": "4632838af54d143cb3a34f014e2de9bea0ed3a1bccf14b747f25be51a66675dc",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/all_lassonet/fold_4.pkl",
+      "bytes": 1124496,
+      "sha256": "310c49b6103e2bc31448ec9994c55e42dc59f8b8ed45a5dba207e55e4bf1a5b9",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/classic/fold_0.pkl",
+      "bytes": 637210,
+      "sha256": "f20a18f251a9a452ca42ec476f3adf38798fd882f088191ad4f2e03c12399a8a",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/classic/fold_1.pkl",
+      "bytes": 637264,
+      "sha256": "375b98242987f3687a6e60f5097e6b000789a4b3c5f64f82be60235c929a2a31",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/classic/fold_2.pkl",
+      "bytes": 637273,
+      "sha256": "dde2a1deb7c5792a0280808badc731b02a252888f533daaeb26d2b89ca8f454a",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/classic/fold_3.pkl",
+      "bytes": 637518,
+      "sha256": "ea996ee5d782827a20b71464ffd16a588fa3bf03ec4d9d4749c3439745ffaf34",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/classic/fold_4.pkl",
+      "bytes": 637385,
+      "sha256": "27d178579315ce6523feef038533ffacf737aae01eab8e778ef1593275cc4fff",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/protein_lassonet/fold_0.pkl",
+      "bytes": 6081166,
+      "sha256": "9d098684fe0515fdc3527a5866f21edb3b4343d2722b516896bb16742e7ea00f",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/protein_lassonet/fold_1.pkl",
+      "bytes": 6082060,
+      "sha256": "ee4b37e38d206af3784083d5c43bc2385598c042e113b69664d382f9b311fe77",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/protein_lassonet/fold_2.pkl",
+      "bytes": 6081682,
+      "sha256": "662d1d95c81d88606153958d0c1d39ef6aed2ea6a7c00f4b71428f5e6b01299f",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/protein_lassonet/fold_3.pkl",
+      "bytes": 6081332,
+      "sha256": "d361fdebad9af03816ac2ee42e3cbe66ff99dad1f3e57e3706865d81f7663a96",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabNet/protein_lassonet/fold_4.pkl",
+      "bytes": 6081115,
+      "sha256": "b3183c68316f3a7d364e7cdc67152a8b178c554b2904b6d09607ac0f894aec10",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/all_lassonet/fold_0.pt",
+      "bytes": 106725,
+      "sha256": "cc7e6c3afd86e9ad7a9b8ff94f76ad3cdea7d2fe3abd394dffb7c8dd17afebfa",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/all_lassonet/fold_1.pt",
+      "bytes": 106725,
+      "sha256": "029096eb8e4f85e08d15fcd5840441258585a885d708ef2beebf1a381ccb5781",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/all_lassonet/fold_2.pt",
+      "bytes": 106725,
+      "sha256": "7022f0d5109bef7ceab4a425553db8f3be118e053e4adfcd04462c07c5365120",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/all_lassonet/fold_3.pt",
+      "bytes": 106725,
+      "sha256": "125ae131099f511737c5dc7ef45102055f88ec050aeb67921718152a49e6f780",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/all_lassonet/fold_4.pt",
+      "bytes": 106725,
+      "sha256": "e6700973b7797b70039e9a0ec9442816aeb4931711da1c573d82feedac349fb8",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/classic/fold_0.pt",
+      "bytes": 65885,
+      "sha256": "4e235791bb3779c4bae2af8af24c545fcf2c50138a0dd972c8005c9293926307",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/classic/fold_1.pt",
+      "bytes": 65885,
+      "sha256": "e47b0f0cf6055e54547da5baf514e3d7be8ff5a3441fc45cd59c74f93e44cef6",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/classic/fold_2.pt",
+      "bytes": 65885,
+      "sha256": "be156961ebcd613812e54541b33a802f3c5f73b2e5f6622ebe7a7e575fd8ef9f",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/classic/fold_3.pt",
+      "bytes": 65885,
+      "sha256": "3f2073c4fce6c317ad7200a052d4fa7fd6457b78e8533bd21058d3983f1c613f",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/classic/fold_4.pt",
+      "bytes": 65885,
+      "sha256": "272dd9170ffa98430082d986a6f49017c80b071c7fb2087197e4912a716cd579",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/protein_lassonet/fold_0.pt",
+      "bytes": 22237,
+      "sha256": "a3030d1ee60b1763fd35f1885eef9f22d355840b4a0cf6c141cbe54c10be1815",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/protein_lassonet/fold_1.pt",
+      "bytes": 22237,
+      "sha256": "068b123e7e1ed2747e9329e581cb922157136bc983f1ec8a0bbe86e8f74512b7",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/protein_lassonet/fold_2.pt",
+      "bytes": 22237,
+      "sha256": "cc0d6ad80809b31e36fc93141a255bae78371f2d13a8c144180924b0e4b522d1",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/protein_lassonet/fold_3.pt",
+      "bytes": 22237,
+      "sha256": "5b7fe75aeb92842cff062b4ace172c3498dee44da67d7f8c17ba7821ae9f2ed0",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/TabPFN/protein_lassonet/fold_4.pt",
+      "bytes": 22237,
+      "sha256": "6e1b3a1345e7824e24f420f8639fd245e05537e99434878924f875f14a9aa1a9",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/all_lassonet/fold_0.pkl",
+      "bytes": 2213903,
+      "sha256": "8d2716c0a15fcb5ef168104cc43ee8df6c882af3a58572dc1106c2be930413a5",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/all_lassonet/fold_1.pkl",
+      "bytes": 1654032,
+      "sha256": "fceca340be5d8fa1a706c97e9b575d75fee281fc85abf3cff39e306eb7b19ecb",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/all_lassonet/fold_2.pkl",
+      "bytes": 2399245,
+      "sha256": "ef6a4c77e9221790cc8a57ffa51ba65265af2fbd382d04d08850f20cd43c995c",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/all_lassonet/fold_3.pkl",
+      "bytes": 1940032,
+      "sha256": "0e14a4f91f4a3e8e42eccaa252e6db2f1cba9a2a275b58c604c77a84e6ffdf1e",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/all_lassonet/fold_4.pkl",
+      "bytes": 1483608,
+      "sha256": "cce4bf73682c53f40f019452f08ade8007f8635c32517b03ab49ec40e34f09b3",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/classic/fold_0.pkl",
+      "bytes": 146591,
+      "sha256": "e4beecd6cef1010597b176e36b5b7f6c0cc37116a31df05d8fb4ba70ae30bbce",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/classic/fold_1.pkl",
+      "bytes": 718225,
+      "sha256": "8b543f3db1e72dd3d346b92cd2239a07aeaf35de231ac250c2cea7afa3ccbd79",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/classic/fold_2.pkl",
+      "bytes": 1106191,
+      "sha256": "ef6eabb0564e999f05f6c6adb7ffbfc83f829067ee462fae090870455cff02f7",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/classic/fold_3.pkl",
+      "bytes": 909663,
+      "sha256": "3ab75a74a20866cf8551b99e6cc090188a4549be0d8f441479f68f8961ab81d0",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/classic/fold_4.pkl",
+      "bytes": 995395,
+      "sha256": "7f1517faa51cf8f63fb210fec463097c87b1e9fa6e95e81802d743e84dcb008b",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/protein_lassonet/fold_0.pkl",
+      "bytes": 1446839,
+      "sha256": "4ade567fd192159bb2e82fda05a2cfc48b1b773071f246a4c8d2bba0ad7ca1c1",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/protein_lassonet/fold_1.pkl",
+      "bytes": 1294853,
+      "sha256": "f289ec1f95c8cb4375b68776f43347fa79415edf703a880abd2a691cebec7403",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/protein_lassonet/fold_2.pkl",
+      "bytes": 1355036,
+      "sha256": "6eb174f160dd6a2330130f9a3a438faa60e78f6d4931b6f2582a796cd37a76d6",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/protein_lassonet/fold_3.pkl",
+      "bytes": 856052,
+      "sha256": "4aef72cfe6ca3ba2458856f18395b7cb43bd6471de027df9577642e3d7901447",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/HF/XGBoost/protein_lassonet/fold_4.pkl",
+      "bytes": 1047751,
+      "sha256": "95a0521ce22eae0855f3e214fcbcf4e62264a37f7112f1cd555fe2c3577df6f1",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/all_lassonet/fold_0.pt",
+      "bytes": 4813638,
+      "sha256": "8387c89245adcb6fcbe14657488ef7b1c39c743e8d777f014c7235363ae7807e",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/all_lassonet/fold_1.pt",
+      "bytes": 4813638,
+      "sha256": "7fb197b937ad89ee1c7f7ebcd4ee99c9c141a3add1c65b95cb7b58101146f4bf",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/all_lassonet/fold_2.pt",
+      "bytes": 4813638,
+      "sha256": "1c6031532d876e8594e3c52845094fb0b14f355521b373225b72bfbbfdd3dc02",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/all_lassonet/fold_3.pt",
+      "bytes": 4813638,
+      "sha256": "a15ec298b4bae19a0ce018599bc3d6c84e6f2ff1942934f995f5ac1233e224f1",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/all_lassonet/fold_4.pt",
+      "bytes": 4813638,
+      "sha256": "ddcff9b7e493c120dec07945e8f6cf9a8464b58d0af0bc5abd1f91e7723dd171",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/classic/fold_0.pt",
+      "bytes": 1391957,
+      "sha256": "f48863245454cc16cb1100fd8dfa8656235034329220df54707f5a9541129041",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/classic/fold_1.pt",
+      "bytes": 1391957,
+      "sha256": "e4e0ceb62e26d292fbe6581a4afc3fe346cc4c511c2f8314a054a15c114df8fb",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/classic/fold_2.pt",
+      "bytes": 1391957,
+      "sha256": "753470f93a810e8e14c2bc6288c904488c30ba5b0e14813bbc40b5471ec2d737",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/classic/fold_3.pt",
+      "bytes": 1391957,
+      "sha256": "060702579896396044fceb38d270ea54e9d43481f07997f88d28fb6d5fe09dc7",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/classic/fold_4.pt",
+      "bytes": 1391957,
+      "sha256": "f4c0edec011a67a989ff05fb362ae49378a5dc38e14854d10abacd047204e76e",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/protein_lassonet/fold_0.pt",
+      "bytes": 4049638,
+      "sha256": "7d7d1d7b13749496a9be34303d17400206f88854d754e8b4251115e6292f204b",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/protein_lassonet/fold_1.pt",
+      "bytes": 4049638,
+      "sha256": "5bc176c3c529ef2b99b0ab6f504b4f215cfa00d414f2fc6e9425c7c039ca2d24",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/protein_lassonet/fold_2.pt",
+      "bytes": 4049638,
+      "sha256": "12424db996dfe95acd7de057feecd1e5639160742f54b15667f8809380e6f95a",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/protein_lassonet/fold_3.pt",
+      "bytes": 4049638,
+      "sha256": "d6edb054b1d8d0ab7646d1d057f755f8527c0ec5528b85824e3fb7ff082b410f",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/FT-Transformer/protein_lassonet/fold_4.pt",
+      "bytes": 4049638,
+      "sha256": "afc612d3724dba1c98fe26434ca17a216fc8cf4b25d698223db0ed27b9215605",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/all_lassonet/fold_0.pkl",
+      "bytes": 95627,
+      "sha256": "68f3697b7130658c4467089b73789b00bfecf2135bcd5cb52821ed5fcbd7bc0c",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/all_lassonet/fold_1.pkl",
+      "bytes": 95555,
+      "sha256": "8cad95fc12f29501b3d425cbae300ea0536a5e14967e4f4c7060df98d9317cce",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/all_lassonet/fold_2.pkl",
+      "bytes": 96275,
+      "sha256": "f669281804c38ca40598ab64e2d6cbd6f41d62ca828419faf010cd62b50643b6",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/all_lassonet/fold_3.pkl",
+      "bytes": 96443,
+      "sha256": "98b8f487d37c8672495f0853e3a76e83811c2f0bbae9c057f51309c139cfccc7",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/all_lassonet/fold_4.pkl",
+      "bytes": 95891,
+      "sha256": "a380c97ec2d1192e62c8b9b02f298e1a33944a039068cb1b9b6ba491002aaa75",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/classic/fold_0.pkl",
+      "bytes": 94293,
+      "sha256": "83ce1f2828fd9eec6ba554dd96f626e50441909ed09bd1914ed83ba78c530f97",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/classic/fold_1.pkl",
+      "bytes": 94221,
+      "sha256": "5168c04c3e8a9ff74b31d7d3a824f3144dc42fd330ef9b8ef0e8c134d5b82eb4",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/classic/fold_2.pkl",
+      "bytes": 94941,
+      "sha256": "aa84958ec11a6fe64193d48b8f9dd2090ddd555a413ebf99bb940764f3219f7b",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/classic/fold_3.pkl",
+      "bytes": 95109,
+      "sha256": "32a84ac75e292f714f3b25076f2726ead7ec356f3a9cb5bc194c796c304b8386",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/classic/fold_4.pkl",
+      "bytes": 94557,
+      "sha256": "8a19a360af13abcdf163bc5671e84baebec834bde15c27c6117824321f40d33f",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/protein_lassonet/fold_0.pkl",
+      "bytes": 95451,
+      "sha256": "d220b342ef210810f4b950a89fb31c04a9c1eaf4f5dcd1e12bcb67c70478beec",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/protein_lassonet/fold_1.pkl",
+      "bytes": 95379,
+      "sha256": "2497ecca13695a6f3feff4a941c2dfed8528b7f241bb67aa3fd357f759f4eadf",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/protein_lassonet/fold_2.pkl",
+      "bytes": 96099,
+      "sha256": "20252e5e8624ef69ef6d87af01872147d9e713039003c1b94ea3b5456433b5c1",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/protein_lassonet/fold_3.pkl",
+      "bytes": 96267,
+      "sha256": "59d9ded07b8586a45096650e44a322e3347a222013a6e51bef88afdc813de4a3",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/LinearModel/protein_lassonet/fold_4.pkl",
+      "bytes": 95715,
+      "sha256": "a0be29399dd9a9c965d41cd4f40de3acd0da166ca51dd0bc6f86d6dcf01faab4",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/all_lassonet/fold_0.pt",
+      "bytes": 98475,
+      "sha256": "ddb24c3befca38bfb8785af288dc1bda966d13dfb836aae7415d8130a8f12163",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/all_lassonet/fold_1.pt",
+      "bytes": 98475,
+      "sha256": "0f815d34a928f7be6dc4a22c7b17ed4fdd4ac4eb9e0b9a80c05984b7f74d31c4",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/all_lassonet/fold_2.pt",
+      "bytes": 98475,
+      "sha256": "7d7f3cc95cfd47c290c61a3f209e269617cddd71f7555cf44fb13d672484b525",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/all_lassonet/fold_3.pt",
+      "bytes": 98475,
+      "sha256": "730e804d2a44bf15a980d5bbbf98016787966da569fde181d930d1bad12a3585",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/all_lassonet/fold_4.pt",
+      "bytes": 98475,
+      "sha256": "e53e2f101a8bf4a555de433389c12b5e76a12c6db3b4fd2d6ed194cc08966197",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/classic/fold_0.pt",
+      "bytes": 40477,
+      "sha256": "bfd89f0bce987af07ee9e5d6b7f83c57c7197877f3e64a19b33f844b4303ec1e",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/classic/fold_1.pt",
+      "bytes": 40477,
+      "sha256": "bf6098dc8345c6d6b2ab2018f93aadb33cc9490493b10abea5425426512d5679",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/classic/fold_2.pt",
+      "bytes": 40477,
+      "sha256": "222b0b6c051ae574c1f2fc6e0e636fb4a978683fb363a489debc87668601b7cf",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/classic/fold_3.pt",
+      "bytes": 40477,
+      "sha256": "ffa5c87a8a91345144655523e7d720a732f0f05b0612e1f38975d93f8441ac50",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/classic/fold_4.pt",
+      "bytes": 40477,
+      "sha256": "7a979b7e028d670509b02c83d2a80a2a101053e87ea88b19303f6cc5b25b9172",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/protein_lassonet/fold_0.pt",
+      "bytes": 94088,
+      "sha256": "59ddb532fb5143d53b85b19718d093ea9a3309ddbebc77e486ccf64d80be1cb6",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/protein_lassonet/fold_1.pt",
+      "bytes": 94088,
+      "sha256": "23e955a5a596d4242c5aea667223015420081da9e94afee2cb18f0f0e75aee29",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/protein_lassonet/fold_2.pt",
+      "bytes": 94088,
+      "sha256": "6b39befe8ea845f6cc79ba2ee07f779043ba2c83fc38b3e5a8be7a5626a3d2b2",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/protein_lassonet/fold_3.pt",
+      "bytes": 94088,
+      "sha256": "47c49e417cac46c20d32c55bfdba91a62c4d68032f1f3898fcf9df888034ccf7",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/MLP/protein_lassonet/fold_4.pt",
+      "bytes": 94088,
+      "sha256": "2d3d2dfa05afe7012eeaf7ac875c44833cc877d54a0decf7076201fd886014e4",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/all_lassonet/fold_0.pt",
+      "bytes": 36206678,
+      "sha256": "c96078e72aa22c49d15291e65fed47c29f3ffa5140b992662245d1b1c21dca94",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/all_lassonet/fold_1.pt",
+      "bytes": 36206678,
+      "sha256": "09d40d631000b4eb00d55b20f5443229c6cbea5ca9a533adf0a85883bfb1e993",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/all_lassonet/fold_2.pt",
+      "bytes": 36206678,
+      "sha256": "520f0de7ebab57942b42dcb947c50d064417e75888ee70b95f0d4d90d08b7e5b",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/all_lassonet/fold_3.pt",
+      "bytes": 36206678,
+      "sha256": "1c8cfe37bf54433d81ce2db8c30f60b66ab9ecf4c6add7c0ee06d8d1904548a3",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/all_lassonet/fold_4.pt",
+      "bytes": 36206678,
+      "sha256": "a51f7e77ccc1af0f23683c5fdcaefa54517d0e9bb24916f3bdbd24a85afdb796",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/classic/fold_0.pt",
+      "bytes": 7981078,
+      "sha256": "1d3d7b0d9fe27af61a8fc3c970c3ddcd9d343a29f11630e7bb3e64884041f1ec",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/classic/fold_1.pt",
+      "bytes": 7981078,
+      "sha256": "7fc229f962e9de0675fd96eb4ff5465732448e0453156e615ff477f0b13efd9d",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/classic/fold_2.pt",
+      "bytes": 7981078,
+      "sha256": "8c9fea8883ffcdf1f85c29f2028649080d998d031cb443d084bddaccfa44c355",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/classic/fold_3.pt",
+      "bytes": 7981078,
+      "sha256": "0bce76e45e35c44987369608db9771667cc435cc129c7f4c36b630622efda93b",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/classic/fold_4.pt",
+      "bytes": 7981078,
+      "sha256": "bee7b4f2f17a2f6ab254050c0cbbe2f677c8655e21fdabdfb259c6885b4e0871",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/protein_lassonet/fold_0.pt",
+      "bytes": 11743254,
+      "sha256": "a214d8a7b7aa14a89569ac7b98f95d8aacc38cd023ddef2ef5da5deace1b4c39",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/protein_lassonet/fold_1.pt",
+      "bytes": 11743254,
+      "sha256": "e6360121bc2b63c9d301ce61f3a690c8fe3b1e5b04791ec57e9d6be46e3b10f7",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/protein_lassonet/fold_2.pt",
+      "bytes": 11743254,
+      "sha256": "ad3c0a34ad7caec7dec484591127716a5ac6cd52d6fcdcebe65c0184e8d923b5",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/protein_lassonet/fold_3.pt",
+      "bytes": 11743254,
+      "sha256": "ae62c02f7caa1b7d147886c3b018a8c8a33c6e84c803c2405ee20a4dfdf3c3b0",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/NODE/protein_lassonet/fold_4.pt",
+      "bytes": 11743254,
+      "sha256": "7c53ee5db3617cde1a3edbddbf5940b5f13320b51ee70153cdd239d500bcd620",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/all_lassonet/fold_0.pt",
+      "bytes": 1489253,
+      "sha256": "47a249e8b872fcdeef68da8a1b6aa8a47d5a684f14b14b2cb0c29b028eebe71b",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/all_lassonet/fold_1.pt",
+      "bytes": 1489253,
+      "sha256": "37723811758023f9b39afa8349ae2b009441818bfd602ca0f33684d0dff9c850",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/all_lassonet/fold_2.pt",
+      "bytes": 1489253,
+      "sha256": "28cb8211e3f3012f97beb68337fc43bea2472f6da8623430171b2dd52c11dd2f",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/all_lassonet/fold_3.pt",
+      "bytes": 1489253,
+      "sha256": "4c1059ce834ea58a3e3fd7a25f2ff34ea18cd6b75e74b7397fcdb6939bcd7dc9",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/all_lassonet/fold_4.pt",
+      "bytes": 1489253,
+      "sha256": "b712c6c85a4d8fd6e32ff2c074c4578abc7d765590f5c0f1606ab998de3a5f0c",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/classic/fold_0.pt",
+      "bytes": 2737074,
+      "sha256": "b189ece875635c580cc04ee9aadb1f212dcdf51ab850c7becf31e404facb0dcc",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/classic/fold_1.pt",
+      "bytes": 2737074,
+      "sha256": "26a1402eb1cdb6f066d558ade8627b47a7dd9ba775efaa937d6e1f8d2b90d532",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/classic/fold_2.pt",
+      "bytes": 2737074,
+      "sha256": "8a621f85a732fd2a5b882b161ee7fc96e9657ebda4ba6ad42b6d527a82ca6c18",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/classic/fold_3.pt",
+      "bytes": 2737074,
+      "sha256": "fca7ffa13ffe30a78bcfd0a91c97cd883704ad4ccbf4f491b19ccf7803a33e21",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/classic/fold_4.pt",
+      "bytes": 2737074,
+      "sha256": "8c5c67f21f1ac17151fcf13ced668d0ea627f3877036e86de27496aa569a5395",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/protein_lassonet/fold_0.pt",
+      "bytes": 1434595095,
+      "sha256": "4ab501d551cad9533c0df047a2978dbc01fb2f97266f0c7e86ce87c35e397a8d",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/protein_lassonet/fold_1.pt",
+      "bytes": 1434595095,
+      "sha256": "d04e1d6688de6916f534236094b57217ed31ba423de6780312f955791e219a5f",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/protein_lassonet/fold_2.pt",
+      "bytes": 1434595095,
+      "sha256": "aabffb88ce8e410646004fae780c924d589f84bf27fbc99019bb1f7f01575c74",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/protein_lassonet/fold_3.pt",
+      "bytes": 1434595095,
+      "sha256": "d96ab87f2f4924c9eb6de32b984f56d7a88015d4553301df2d6b640be580e41e",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/SAINT/protein_lassonet/fold_4.pt",
+      "bytes": 1434595095,
+      "sha256": "9c9f201e3ed80a8116d2200555aae48908a73dd8a4898d6b3b744ece2db0a7ea",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/all_lassonet/fold_0.pkl",
+      "bytes": 963100,
+      "sha256": "439d30a449b70378a847f00ea645fa7138e4de3dfb99ccbfc09829f6fc0af21b",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/all_lassonet/fold_1.pkl",
+      "bytes": 962585,
+      "sha256": "368fa5347fab24a795cfefdd2a41805723d9452a59b9f0595f62359cb89cf120",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/all_lassonet/fold_2.pkl",
+      "bytes": 963266,
+      "sha256": "311a1ecf7590126aa3cc0c4a481fc602915e3b4d830468393787b4a52753345d",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/all_lassonet/fold_3.pkl",
+      "bytes": 964891,
+      "sha256": "c67f5bd64db7183ff31dd28354243d1616d36c3a05dae3f9ff23569ecbfe493c",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/all_lassonet/fold_4.pkl",
+      "bytes": 962565,
+      "sha256": "28f1b639667b08bb2edd5af91f408cf72f4d9dadd7e9c21db77b27c23ba379fc",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/classic/fold_0.pkl",
+      "bytes": 4693323,
+      "sha256": "6be27fb986f720a46d126ec2b4c081d254e076a0b424703f559d01656e97ff55",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/classic/fold_1.pkl",
+      "bytes": 4693331,
+      "sha256": "c28ee068ed0db342689b49cce2c20a41d641e9950b864abf76a135a29a5938e5",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/classic/fold_2.pkl",
+      "bytes": 4693661,
+      "sha256": "0530fbb05ab649bc50c00fc895c4df75d21d21386743c929cf4c89edf4c64842",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/classic/fold_3.pkl",
+      "bytes": 4693778,
+      "sha256": "bf21ab482c702deec8f52127d6981ab8a1d49ad93706c097031a5b0f29f1a49d",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/classic/fold_4.pkl",
+      "bytes": 4693293,
+      "sha256": "46552d4272fddbd01f2f76837553c2e1aa7044023c541da558e806a1a5af769a",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/protein_lassonet/fold_0.pkl",
+      "bytes": 2951639,
+      "sha256": "a5f2475345108f644d569f9ae2cb1d60375034729e6344831e4136c525c97c52",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/protein_lassonet/fold_1.pkl",
+      "bytes": 2952321,
+      "sha256": "b506e88982e3adc5bb1c1274f893a517cf28d88bf952ebb024493eb304e96ffb",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/protein_lassonet/fold_2.pkl",
+      "bytes": 2952057,
+      "sha256": "f11de44c66a451b1fe24c9e6f30270af4ee5aa48565ddfa6c380cb4301699981",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/protein_lassonet/fold_3.pkl",
+      "bytes": 2952279,
+      "sha256": "58605da674ca30fa10265e47ff2ad24dc0655a99c30caf32d98aec7ca9e150bf",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabNet/protein_lassonet/fold_4.pkl",
+      "bytes": 2952046,
+      "sha256": "039cc6a40811552931cf29363ec768d657d43351c510b59a591ed58a5814154f",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/all_lassonet/fold_0.pt",
+      "bytes": 138457,
+      "sha256": "6462f1d9d75c76360559d5b7e8a1cfb2d55e585ec45e26f7ded4601d361fafb3",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/all_lassonet/fold_1.pt",
+      "bytes": 138457,
+      "sha256": "d7adeef8098cb2548666b917fd29cc52d781c08b199875f503bb334ff3dae305",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/all_lassonet/fold_2.pt",
+      "bytes": 138457,
+      "sha256": "df1c83a71ac8c6f168db6b5a9a636e4d9e26b118a42acb7bc92e0d42fb12b4df",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/all_lassonet/fold_3.pt",
+      "bytes": 138457,
+      "sha256": "6d614df295307ab70f4cab347f9fdf49957b28da6d78a957493016ce1da3f0ad",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/all_lassonet/fold_4.pt",
+      "bytes": 138457,
+      "sha256": "40aaa0ce23ed0398899f53ebe16b0345399ace041fc1dfdd35507b1ead99a9c3",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/classic/fold_0.pt",
+      "bytes": 223457,
+      "sha256": "a91b2451a9732bd6ed713ac3721f3690cd45f14a118ed77c215cbf56c6f0f838",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/classic/fold_1.pt",
+      "bytes": 223457,
+      "sha256": "c23bc1d8b70b34f4e57884606a54c5d37dd114dbce9924ef75ede33dbc911e91",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/classic/fold_2.pt",
+      "bytes": 223457,
+      "sha256": "7ef689c4715ab75f49389f27fe9f70ed68d7b2de8061bee7226603276051bfd3",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/classic/fold_3.pt",
+      "bytes": 223457,
+      "sha256": "2215758b74bc4ea47c8c20e12881217e07c85b6c5f4cebb018d83e2604cbc0e1",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/classic/fold_4.pt",
+      "bytes": 223457,
+      "sha256": "5d9e57f7662f932d0dc72c083d98c327d39ad25bbc89a30e818a275431a7428c",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/protein_lassonet/fold_0.pt",
+      "bytes": 75225,
+      "sha256": "e7753cc3268f77388f809a6ae1258034e071a0c94847c1eba7d7bc9648098f63",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/protein_lassonet/fold_1.pt",
+      "bytes": 75225,
+      "sha256": "e3453f5b1b8f9bc16205416bf9bf2a3d8be307e0a129a6e3b7da57c1a8cc4f01",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/protein_lassonet/fold_2.pt",
+      "bytes": 75225,
+      "sha256": "3c280e518d4a921cc4e190d785778f87b5122c56c73d828c7e8cf44f35db7878",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/protein_lassonet/fold_3.pt",
+      "bytes": 75225,
+      "sha256": "4fb925079bcfc035097d6bcdabc9bd64994a8c97dfc387217a92efff4af74b1f",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/TabPFN/protein_lassonet/fold_4.pt",
+      "bytes": 75225,
+      "sha256": "68df56b43e43458d506715ff359522cfad7f7553cda082335e284140b40243f3",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/all_lassonet/fold_0.pkl",
+      "bytes": 1773706,
+      "sha256": "611266a58d4ab512dc6c172175cad56db5feb0272be270898d7f7fc29c52b11f",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/all_lassonet/fold_1.pkl",
+      "bytes": 2540194,
+      "sha256": "86c6f1a5082444452605d1730035daebbd39094906663b9bd152116418c80707",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/all_lassonet/fold_2.pkl",
+      "bytes": 2624429,
+      "sha256": "e2a8469b4909940c7082c22d2c23277e39a55e4bd93d4e13705093891ca5f296",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/all_lassonet/fold_3.pkl",
+      "bytes": 2923578,
+      "sha256": "fdde61d99cf2dacf4ad5cc56a34a839df2904cd62990b94cefda5ba41f1c0789",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/all_lassonet/fold_4.pkl",
+      "bytes": 2533182,
+      "sha256": "d776ab56063c7b1c58a5498de0fde5a6b5985d3a13919e7f3be256171617dc93",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/classic/fold_0.pkl",
+      "bytes": 291915,
+      "sha256": "b2ac3d62bbc07298a282adace33e6d5c751027d223849976a08b5c007efec9fc",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/classic/fold_1.pkl",
+      "bytes": 573441,
+      "sha256": "20cb15fcabc1d0ada167b9d9a5f509284305a9ffe09577e5347ee00fe6cda7a7",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/classic/fold_2.pkl",
+      "bytes": 613666,
+      "sha256": "a9054477980b5ef641bfa72c1b7da0bb32d47ca3efb11b5dd1fb95b825f0afa0",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/classic/fold_3.pkl",
+      "bytes": 644341,
+      "sha256": "74151379faead87d4087360ef481bffd1ff68b5019c4ce6fd16e9bddef491e67",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/classic/fold_4.pkl",
+      "bytes": 458477,
+      "sha256": "63547857452216a34e1f2e550f0f989331d3a5e7d290259dc0e4927f23417ec0",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "fold": 4
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/protein_lassonet/fold_0.pkl",
+      "bytes": 2034353,
+      "sha256": "2a32388592cef7e5428dff89d13982ee95294b83577e93eec1361dcd13ec7223",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 0
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/protein_lassonet/fold_1.pkl",
+      "bytes": 2201793,
+      "sha256": "a4b9986e9ab1f9791b7e2da926afe2a15be61b3f0289bbd29d6c99e6a30a4069",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 1
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/protein_lassonet/fold_2.pkl",
+      "bytes": 1871963,
+      "sha256": "fe2f7c03e27cca968b11ce15580bc0a86e655db10f844b5c3162be50dbef49fc",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 2
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/protein_lassonet/fold_3.pkl",
+      "bytes": 2534315,
+      "sha256": "f35ab316a2e583a61a24ab31fc4c3531c43d006ecb9316d67769b3c9b7a963f9",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 3
+    },
+    {
+      "kind": "fold_model",
+      "path": "models/Total_CVD/XGBoost/protein_lassonet/fold_4.pkl",
+      "bytes": 2139045,
+      "sha256": "ff2a89fd7b76b98e260f4c784e9af697920bdecae7468f6b7f8fd0a529d239eb",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "fold": 4
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/FT-Transformer/all_lassonet.db",
+      "bytes": 122880,
+      "sha256": "b38b458d2542e734d7279a1fb792e48137573a1ce9696436d62f8b269208f726",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/FT-Transformer/classic.db",
+      "bytes": 122880,
+      "sha256": "26ba6747141e297a056a58f5157a50380655f9f2fecb84a3e32245865ba848ca",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/FT-Transformer/protein_lassonet.db",
+      "bytes": 122880,
+      "sha256": "1607709a696f17900afbe04c381e184d430125de09c375ac87021276873a0234",
+      "outcome": "ASCVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/LinearModel/all_lassonet.db",
+      "bytes": 139264,
+      "sha256": "e14ef1afbc4b6c1117a3d779d8f57f37c507688e49a47f59f4f61d7b189876e6",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/LinearModel/classic.db",
+      "bytes": 139264,
+      "sha256": "a462f4cecea159c915dc8ae0150239bc27c07008d031f3d3a126c16c9ac4a91d",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/LinearModel/protein_lassonet.db",
+      "bytes": 139264,
+      "sha256": "5d54dd53c4d8ffa1e6eb43be3ade6604de664a8ae127223ebc57c46dbb502f9d",
+      "outcome": "ASCVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/MLP/all_lassonet.db",
+      "bytes": 184320,
+      "sha256": "3483c8fce111f5ba5a3cd888a956136e80e684c24b747f3117185af3a77ede7e",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/MLP/classic.db",
+      "bytes": 184320,
+      "sha256": "45c5528d3b765e512999316dfe1bc34591dbcffca492eee2250040ef0f965390",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/MLP/protein_lassonet.db",
+      "bytes": 184320,
+      "sha256": "9d88860784404c4f69f364d2d72777242852750ecd56f3aaec7255e48b017a77",
+      "outcome": "ASCVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/NODE/all_lassonet.db",
+      "bytes": 126976,
+      "sha256": "b8cfeeac1aac339a190209066fc43e56409ff12e3f088bb9e47ae529fd5f0410",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/NODE/classic.db",
+      "bytes": 126976,
+      "sha256": "894e0409c5ab24d171ef9071eb9456131094f29e7b4fc4f129f7ce0919b5c7db",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/NODE/protein_lassonet.db",
+      "bytes": 126976,
+      "sha256": "57a73c67cfaf18cbfce099ac1467f75c34075b0a692dcd31833886f8627040d8",
+      "outcome": "ASCVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/SAINT/all_lassonet.db",
+      "bytes": 122880,
+      "sha256": "57ea1e30de5398fc2721a049ce3d44cf57b10cc33b2c170b6f1d9605739968a4",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/SAINT/classic.db",
+      "bytes": 122880,
+      "sha256": "f122a944571662f7d8c5f68ed745b541ae9380c58ba2429215c480d9f775cd00",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/SAINT/protein_lassonet.db",
+      "bytes": 122880,
+      "sha256": "fdf1db1b877981a1871d036a5924d621752a4c8f11b51d133604f2b1ad6034af",
+      "outcome": "ASCVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/TabNet/all_lassonet.db",
+      "bytes": 139264,
+      "sha256": "051643f554a4e65ac250b3ba8474e664744de211dd0347b297a070b7815f0ce6",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/TabNet/classic.db",
+      "bytes": 139264,
+      "sha256": "efb3298f34b53b7cc25723700c177fc066e557588faa7f4daaaf3688e26679c2",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/TabNet/protein_lassonet.db",
+      "bytes": 139264,
+      "sha256": "eea07523668537e4c32faea629dc37b09c76c5456b7b76d39e84d469f991ed1b",
+      "outcome": "ASCVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/TabPFN/all_lassonet.db",
+      "bytes": 184320,
+      "sha256": "bfca78631471c99947e301b9584a853b05b8b2db1de45fdee7ada72bd4d23d43",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/TabPFN/classic.db",
+      "bytes": 184320,
+      "sha256": "0398e48fb6923f9a81fcd149a95bb1512970f4abebf6420643c411c79eb51cda",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/TabPFN/protein_lassonet.db",
+      "bytes": 184320,
+      "sha256": "6c8f00c73a9a6ce736ba5adf01dbfd65da4aa6718a7f9e87938ec32078fff7f4",
+      "outcome": "ASCVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/XGBoost/all_lassonet.db",
+      "bytes": 241664,
+      "sha256": "45c98b3653e4ea6bf66aaf225863e8080c3c1dcfbe948ad0ea9e8abdfcecbc5b",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/XGBoost/classic.db",
+      "bytes": 241664,
+      "sha256": "4d75758380705925a2f936d998362f71307e92266aa2a2ad38c438754f572ffd",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/ASCVD/XGBoost/protein_lassonet.db",
+      "bytes": 241664,
+      "sha256": "79c44c5c77766e363876a91c95de41c1c42469ebf34e6a60eb691fc32f6944ce",
+      "outcome": "ASCVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/FT-Transformer/all_lassonet.db",
+      "bytes": 122880,
+      "sha256": "d91ad1a53502b9ed024aea67d899ad77978c2a727f9d713ea6b9fa46473df603",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/FT-Transformer/classic.db",
+      "bytes": 122880,
+      "sha256": "74cf9d4812b4acd45a09810b0e1657c6e5813a71d297326024be50a88f1850fc",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/FT-Transformer/protein_lassonet.db",
+      "bytes": 122880,
+      "sha256": "969ae00588e61b7e284afb6a3486fe41d2b8aeb3dca533b887a7026761d810a2",
+      "outcome": "HF",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/LinearModel/all_lassonet.db",
+      "bytes": 139264,
+      "sha256": "8c7220da6a95856be007c7e0bd8e4162333a296d6f7a7279d576c31ecf04b409",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/LinearModel/classic.db",
+      "bytes": 139264,
+      "sha256": "63ff03e9ed1a184aebf0b313fbeac9dad64f6b922dc69bc9f8ac139d05bbc3c9",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/LinearModel/protein_lassonet.db",
+      "bytes": 139264,
+      "sha256": "c6a9fe337a9f18dcb06e27d75978315a1c64a15945380d0520052b789d36aeb5",
+      "outcome": "HF",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/MLP/all_lassonet.db",
+      "bytes": 184320,
+      "sha256": "1c3ebd4dcb376544fbf3d5e332248ead4bba6f5d3a724989724d193207adb78c",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/MLP/classic.db",
+      "bytes": 184320,
+      "sha256": "62db1dd56a094f2445c0872b319a1296c15ffb407185f86d2cadac48e75124a1",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/MLP/protein_lassonet.db",
+      "bytes": 184320,
+      "sha256": "97d52f9f2e309eb86d76fbe326618096431aff169112d18d13e7ad2007f257ef",
+      "outcome": "HF",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/NODE/all_lassonet.db",
+      "bytes": 126976,
+      "sha256": "2dbec7ac92f5d7bc63177c879a0ffd7e27b4a071ddaa67e3fbf6117ce92e56e8",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/NODE/classic.db",
+      "bytes": 126976,
+      "sha256": "c409104c8c096fdea951af56e0dd3338b1b2592293ebd4e0a04fb5aa846c65a5",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/NODE/protein_lassonet.db",
+      "bytes": 126976,
+      "sha256": "4fb71cb45a1c3406c162b00385569b5ba7d9a5e8f5a0e59680b79783f46d59a5",
+      "outcome": "HF",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/SAINT/all_lassonet.db",
+      "bytes": 122880,
+      "sha256": "9c075ae0192cf94ed96abbe517afa4f1ece3fb549c9be7c631c80d90c9ffc9b5",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/SAINT/classic.db",
+      "bytes": 122880,
+      "sha256": "6a69ea8eac6da4922941a232499baba0497c057eec46aacb17aa0cf46c33c6e4",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/SAINT/protein_lassonet.db",
+      "bytes": 122880,
+      "sha256": "43ad97ea46261e9bc50e83a54d200e847a36891239fb5142b238e5664e4c57c3",
+      "outcome": "HF",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/TabNet/all_lassonet.db",
+      "bytes": 139264,
+      "sha256": "386f1faab383a875069309f75395fe3422a39fc8b9456dcf16f01a9cbec401c0",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/TabNet/classic.db",
+      "bytes": 139264,
+      "sha256": "8a96348c5ede41312fde181054e977d5db267ec6436c493e6444e19a855b982a",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/TabNet/protein_lassonet.db",
+      "bytes": 139264,
+      "sha256": "f390aae32453a017ba9005def5eb037e1a0f9e7c74f016a43cb1c62c9079a755",
+      "outcome": "HF",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/TabPFN/all_lassonet.db",
+      "bytes": 184320,
+      "sha256": "f47a6fd9ff00f4859c6f6acb3472398b021332c88bd65cb878b63823294c6955",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/TabPFN/classic.db",
+      "bytes": 184320,
+      "sha256": "5302307e0ccaac809f1324e0c5a391d6fdb55bb16496be59499a5b8b6a284562",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/TabPFN/protein_lassonet.db",
+      "bytes": 184320,
+      "sha256": "3aa326fa14103174343cd61c6a43182515b646fd1f6f9e0953425563513f539e",
+      "outcome": "HF",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/XGBoost/all_lassonet.db",
+      "bytes": 241664,
+      "sha256": "bc48f34d1bd6d337d8b81c28f3faa48df8464163edd9e893fca83c4465533754",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/XGBoost/classic.db",
+      "bytes": 241664,
+      "sha256": "0ee980c91d33a1be0d7345c85872a0195974675f2f72674e0c40d35c4ddb6cdb",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/HF/XGBoost/protein_lassonet.db",
+      "bytes": 241664,
+      "sha256": "1fc71e428d97caa061f9a2923fa5217a5bdfa667215ed124300253e63921bece",
+      "outcome": "HF",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/FT-Transformer/all_lassonet.db",
+      "bytes": 122880,
+      "sha256": "6c20e477456a57e5854acf00dc1b855e7dc1357446cba851a4a77faff019880f",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/FT-Transformer/classic.db",
+      "bytes": 122880,
+      "sha256": "b41cdeaec9e05d600b5f221a287be201b23285609424279f386c50b482392efb",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/FT-Transformer/protein_lassonet.db",
+      "bytes": 122880,
+      "sha256": "5368ebf4a731d6be0c652a91d52c971187227ab4ebc624b8a497ecf0697ed714",
+      "outcome": "Total_CVD",
+      "algorithm": "FT-Transformer",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/LinearModel/all_lassonet.db",
+      "bytes": 139264,
+      "sha256": "6c5412556c8389153df21817eccee9503256a474a38f5df61e35cb6ca3f14cc6",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/LinearModel/classic.db",
+      "bytes": 139264,
+      "sha256": "e917450e6a235cfff70eda18c62eb6dca1c2f989e6a44edc71011e41e45eebdf",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/LinearModel/protein_lassonet.db",
+      "bytes": 139264,
+      "sha256": "743fa8e95f692cb105612f0cec4fe95ac1b22d00096027baf36d0e0a26d4c079",
+      "outcome": "Total_CVD",
+      "algorithm": "LinearModel",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/MLP/all_lassonet.db",
+      "bytes": 184320,
+      "sha256": "62d0563839b3ef00c6e39866c4c84ff5958b5ab878c1d64b388c068dc9c58033",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/MLP/classic.db",
+      "bytes": 184320,
+      "sha256": "4a3ba0d0e991eba524e1fe8c62512b8d66397263bdee0da4af775ea8d1ff9561",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/MLP/protein_lassonet.db",
+      "bytes": 184320,
+      "sha256": "e408ab635eba70af1eee16cea87125abfd616569e19fdc7074f35947f4da35a7",
+      "outcome": "Total_CVD",
+      "algorithm": "MLP",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/NODE/all_lassonet.db",
+      "bytes": 126976,
+      "sha256": "446f818a874efec6f1d60288db7cdcb7e614bae8cda69b3e12b0f5c99f53d984",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/NODE/classic.db",
+      "bytes": 126976,
+      "sha256": "fba40b59079d1e291e1a2ff7d59766272eb3e7458a6f9edf0511fe699eeadc5d",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/NODE/protein_lassonet.db",
+      "bytes": 126976,
+      "sha256": "862c98500d2bda8ebe9257638f69c04bae33e0c9ee7c015c7541d05ec552d7a3",
+      "outcome": "Total_CVD",
+      "algorithm": "NODE",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/SAINT/all_lassonet.db",
+      "bytes": 122880,
+      "sha256": "e9fea0b52d849cb2a2070c2a1996adc8d8b7a6dc9b95f767543d79a3f92b5c00",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/SAINT/classic.db",
+      "bytes": 122880,
+      "sha256": "045a2b30b7fe856cefd9bb619311ddaf9be1d547962f7daddf795ef5bcc273d9",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/SAINT/protein_lassonet.db",
+      "bytes": 122880,
+      "sha256": "84519004fdfc20233f7b278f44fe91a5510d9c408ffc214bbe90c2bc72a74ed5",
+      "outcome": "Total_CVD",
+      "algorithm": "SAINT",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/TabNet/all_lassonet.db",
+      "bytes": 139264,
+      "sha256": "7d84455b785f51700ac0c94661f540027e0ac74a22ca34fb392cd986f0339ce6",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "all_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/TabNet/classic.db",
+      "bytes": 139264,
+      "sha256": "eb130b57bfc7c1d3040f1cc623f7cc4b680717ff5d841d8c6e012940794db96d",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "classic",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/TabNet/protein_lassonet.db",
+      "bytes": 139264,
+      "sha256": "5d551195ccc2bd3709103e79e2787ff8eca473895b4931530f505ad247c3db13",
+      "outcome": "Total_CVD",
+      "algorithm": "TabNet",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 20,
+      "trial_states": {
+        "COMPLETE": 20
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/TabPFN/all_lassonet.db",
+      "bytes": 184320,
+      "sha256": "d5241908b24abd4b3e0f526525a534db7c7bf35816951c8641920bf861fc3884",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/TabPFN/classic.db",
+      "bytes": 184320,
+      "sha256": "077de4693e190be6775f88acdf663468e8a268d8aa4a5d6cc23910564722be81",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/TabPFN/protein_lassonet.db",
+      "bytes": 184320,
+      "sha256": "bdabee3d9802dc575cfc2ec4828735187b04b6d5ea38794122d3e37fafb7d2ca",
+      "outcome": "Total_CVD",
+      "algorithm": "TabPFN",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/XGBoost/all_lassonet.db",
+      "bytes": 241664,
+      "sha256": "9cd70376d698cce2a09a11a435415dad2504ec420b7663503cf026d12b120a76",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "all_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/XGBoost/classic.db",
+      "bytes": 241664,
+      "sha256": "813b55f29379a83ddfbf0200b4c06f739fd9b9bfbe8183475fea4fcec4b71c48",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "classic",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    },
+    {
+      "kind": "optuna_database",
+      "path": "optuna/Total_CVD/XGBoost/protein_lassonet.db",
+      "bytes": 241664,
+      "sha256": "840e0be626b7ef7661139e3cb21c6ee4a2bc102a74f40d4383884b1bc938c766",
+      "outcome": "Total_CVD",
+      "algorithm": "XGBoost",
+      "predictor_set": "protein_lassonet",
+      "trial_count": 100,
+      "trial_states": {
+        "COMPLETE": 100
+      }
+    }
+  ],
+  "missing": []
+}

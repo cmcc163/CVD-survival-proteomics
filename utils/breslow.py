@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.interpolate import interp1d
 
 class BreslowEstimator:
     """
@@ -109,13 +108,16 @@ class BreslowEstimator:
         return self
 
     def get_survival_function(self, log_risk_scores):
-        """
-        返回生存函数对象 (Step Function)。
-        S(t|x) = exp(-H0(t) * exp(x*beta))
-        """
-        
-        
-        pass 
+        """Return one callable stepwise survival function per observation."""
+
+        functions = []
+        for score in np.atleast_1d(log_risk_scores).astype(float):
+            def survival(time_points, fixed_score=score):
+                values = self.predict_survival_probabilities([fixed_score], time_points)[0]
+                return float(values[0]) if np.ndim(time_points) == 0 else values
+
+            functions.append(survival)
+        return functions
 
     def predict_survival_probabilities(self, log_risk_scores, time_points):
         """

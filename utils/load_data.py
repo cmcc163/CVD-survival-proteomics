@@ -7,6 +7,8 @@ each training fold by ``models.baseline_models.process_data`` and then applied
 unchanged to validation and external ancestry cohorts.
 """
 
+from __future__ import annotations
+
 from pathlib import Path
 from typing import Iterable
 
@@ -18,19 +20,19 @@ CLINICAL_FEATURES = [
     "age",
     "sex",
     "ever_smoked",
-    "Diabetes_baseline_1",
+    "Diabetes_baseline",
     "Cholesterol_treatment",
     "hdl_cholesterol",
     "non_hdl_cholesterol",
     "hypertension_treatment",
     "average_SBP",
-    "eGFR_SCysC",
+    "eGFR",
     "BMI",
 ]
 CATEGORICAL_FEATURES = [
     "sex",
     "ever_smoked",
-    "Diabetes_baseline_1",
+    "Diabetes_baseline",
     "Cholesterol_treatment",
     "hypertension_treatment",
 ]
@@ -45,8 +47,6 @@ RESERVED_COLUMNS = {
     "Is_Incident",
     "total_cholesterol",
 }
-
-
 def _read_name_column(path: Path, preferred: Iterable[str]) -> list[str]:
     table = pd.read_csv(path)
     for column in preferred:

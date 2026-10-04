@@ -437,15 +437,20 @@ class Objective(object):
                     
                     
                     
-                    # m_temp_fold_0.pkl -> m_best_fold_0.pkl
-                    new_filename = filename.replace(f"temp_fold_{i}", f"best_fold_{i}")
-                    
-                    dst_path = os.path.join(save_dir, new_filename)
+                    # Promote the temporary checkpoint to the canonical fold_N file.
+                    file_type = os.path.splitext(filename)[1].lstrip(".")
+                    dst_path = get_output_path(
+                        self.args,
+                        directory="models",
+                        filename="m",
+                        extension=f"best_fold_{i}",
+                        file_type=file_type,
+                    )
                     
                     try:
                         
                         shutil.copy2(f_path, dst_path)
-                        # print(f"  Saved: {new_filename}")
+                        # print(f"  Saved: {dst_path}")
                     except Exception as e:
                         print(f"  Failed to copy best model {filename}: {e}")
                   

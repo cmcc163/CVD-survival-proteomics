@@ -339,8 +339,14 @@ class TabPFNObjective(object):
                 
                 for f_path in found_files:
                     filename = os.path.basename(f_path)
-                    new_filename = filename.replace(f"temp_fold_{i}", f"best_fold_{i}")
-                    dst_path = os.path.join(save_dir, new_filename)
+                    file_type = os.path.splitext(filename)[1].lstrip(".")
+                    dst_path = get_output_path(
+                        self.args,
+                        directory="models",
+                        filename="m",
+                        extension=f"best_fold_{i}",
+                        file_type=file_type,
+                    )
                     try:
                         shutil.copy2(f_path, dst_path)
                     except Exception as e:

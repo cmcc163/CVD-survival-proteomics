@@ -33,13 +33,13 @@ REQUIRED_COLUMNS = [
     "age",
     "sex",
     "ever_smoked",
-    "Diabetes_baseline_1",
+    "Diabetes_baseline",
     "Cholesterol_treatment",
     "hdl_cholesterol",
     "total_cholesterol",
     "hypertension_treatment",
     "average_SBP",
-    "eGFR_SCysC",
+    "eGFR",
     "BMI",
 ]
 
@@ -88,7 +88,7 @@ def summarize_group(df: pd.DataFrame, label: str, subset: pd.DataFrame) -> dict:
         "Age, y": format_mean_sd(subset["age"]),
         "Male sex": format_n_pct(subset["sex"].eq(1), denominator),
         "Ever smoked": format_n_pct(subset["ever_smoked"].eq(1), denominator),
-        "Diabetes": format_n_pct(subset["Diabetes_baseline_1"].eq(1), denominator),
+        "Diabetes": format_n_pct(subset["Diabetes_baseline"].eq(1), denominator),
         "Lipid-lowering medication": format_n_pct(
             subset["Cholesterol_treatment"].eq(1), denominator
         ),
@@ -98,7 +98,7 @@ def summarize_group(df: pd.DataFrame, label: str, subset: pd.DataFrame) -> dict:
             subset["hypertension_treatment"].eq(1), denominator
         ),
         "Systolic blood pressure, mm Hg": format_mean_sd(subset["average_SBP"]),
-        "eGFR, mL/min/1.73 m\u00b2": format_mean_sd(subset["eGFR_SCysC"]),
+        "eGFR, mL/min/1.73 m\u00b2": format_mean_sd(subset["eGFR"]),
         "BMI, kg/m\u00b2": format_mean_sd(subset["BMI"]),
     }
 
@@ -448,7 +448,7 @@ def summarize_baseline_dataset(subset: pd.DataFrame) -> dict[str, str]:
         "Age, y": format_mean_sd(subset["age"]),
         "Male sex": format_n_pct(subset["sex"].eq(1), denominator),
         "Ever smoked": format_n_pct(subset["ever_smoked"].eq(1), denominator),
-        "Diabetes": format_n_pct(subset["Diabetes_baseline_1"].eq(1), denominator),
+        "Diabetes": format_n_pct(subset["Diabetes_baseline"].eq(1), denominator),
         "Lipid-lowering medication": format_n_pct(
             subset["Cholesterol_treatment"].eq(1), denominator
         ),
@@ -458,7 +458,7 @@ def summarize_baseline_dataset(subset: pd.DataFrame) -> dict[str, str]:
             subset["hypertension_treatment"].eq(1), denominator
         ),
         "Systolic blood pressure, mm Hg": format_mean_sd(subset["average_SBP"]),
-        "eGFR, mL/min/1.73 m\u00b2": format_mean_sd(subset["eGFR_SCysC"]),
+        "eGFR, mL/min/1.73 m\u00b2": format_mean_sd(subset["eGFR"]),
         "BMI, kg/m\u00b2": format_mean_sd(subset["BMI"]),
     }
 

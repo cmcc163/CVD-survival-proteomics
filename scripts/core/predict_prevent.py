@@ -34,10 +34,10 @@ class PREVENTModel_Total_CVD:
         hdl_trans = (df['hdl_cholesterol'] - 1.3) / 0.3
         sbp_trans_1 = (np.minimum(df['average_SBP'], 110) - 110) / 20
         sbp_trans_2 = (np.maximum(df['average_SBP'], 110) - 130) / 20
-        egfr_trans_1 = (np.minimum(df['eGFR_SCysC'], 60) - 60) / -15
-        egfr_trans_2 = (np.maximum(df['eGFR_SCysC'], 60) - 90) / -15
+        egfr_trans_1 = (np.minimum(df['eGFR'], 60) - 60) / -15
+        egfr_trans_2 = (np.maximum(df['eGFR'], 60) - 90) / -15
 
-        diabetes = df['Diabetes_baseline_1']
+        diabetes = df['Diabetes_baseline']
         smoker = df['ever_smoked']
         htn_meds = df['hypertension_treatment']
         statin = df['Cholesterol_treatment']
@@ -115,12 +115,12 @@ class PREVENTModel_HF:
         age_trans = (df['age'] - 55) / 10
         sbp_trans_1 = (np.minimum(df['average_SBP'], 110) - 110) / 20
         sbp_trans_2 = (np.maximum(df['average_SBP'], 110) - 130) / 20
-        egfr_trans_1 = (np.minimum(df['eGFR_SCysC'], 60) - 60) / -15
-        egfr_trans_2 = (np.maximum(df['eGFR_SCysC'], 60) - 90) / -15
+        egfr_trans_1 = (np.minimum(df['eGFR'], 60) - 60) / -15
+        egfr_trans_2 = (np.maximum(df['eGFR'], 60) - 90) / -15
         bmi_trans_1 = (np.minimum(df['BMI'], 30) - 25) / 5
         bmi_trans_2 = (np.maximum(df['BMI'], 30) - 30) / 5
 
-        diabetes = df['Diabetes_baseline_1']
+        diabetes = df['Diabetes_baseline']
         smoker = df['ever_smoked']
         htn_meds = df['hypertension_treatment']
 
@@ -193,10 +193,10 @@ class PREVENTModel_ASCVD:
         hdl_trans = (df['hdl_cholesterol'] - 1.3) / 0.3
         sbp_trans_1 = (np.minimum(df['average_SBP'], 110) - 110) / 20
         sbp_trans_2 = (np.maximum(df['average_SBP'], 110) - 130) / 20
-        egfr_trans_1 = (np.minimum(df['eGFR_SCysC'], 60) - 60) / -15
-        egfr_trans_2 = (np.maximum(df['eGFR_SCysC'], 60) - 90) / -15
+        egfr_trans_1 = (np.minimum(df['eGFR'], 60) - 60) / -15
+        egfr_trans_2 = (np.maximum(df['eGFR'], 60) - 90) / -15
 
-        diabetes = df['Diabetes_baseline_1']
+        diabetes = df['Diabetes_baseline']
         smoker = df['ever_smoked']
         htn_meds = df['hypertension_treatment']
         statin = df['Cholesterol_treatment']

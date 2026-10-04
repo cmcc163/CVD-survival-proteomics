@@ -1,0 +1,748 @@
+[
+  {
+    "artifact": "RP-SAINT five-fold survival ensemble",
+    "outcome": "Total_CVD",
+    "created_utc": "2026-10-04T11:50:22.549749+00:00",
+    "source_code": {
+      "saint_py_sha256": "ffef1a83a0b463c464e7f18edc0ee26eeade12539be705e0b836370a9bceda98",
+      "load_data_py_sha256": "bea8c7bb622e2892f0efe631a452b08d49258ac5cd9723376fab72316697d17b",
+      "config_sha256": "d9803d9588d760d4ea98a215ae85682ae8f80507f79b0914f9271cbf4e36844d"
+    },
+    "optuna": {
+      "study_name": "SAINT_UKB_Total_CVD_all_lassonet_Kneedle",
+      "database_sha256": "6af5d906b77f099ef414041dfcc85cca67399bf19cc973ed72ca1fca553903bf",
+      "n_trials": 20,
+      "best_trial_number": 14,
+      "best_value": 0.7799449587426734,
+      "best_params": {
+        "dim": 64,
+        "depth": 1,
+        "heads": 8,
+        "dropout": 0.7063695804583935
+      },
+      "best_n_epochs_user_attr": 29
+    },
+    "training": {
+      "python": "3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]",
+      "torch": "2.4.1",
+      "cuda": "11.8",
+      "device": "NVIDIA GeForce RTX 4060 Ti",
+      "seed": 221,
+      "holdout_ratio": 0.1,
+      "folds": 5,
+      "batch_size": 1024,
+      "early_stopping_rounds": 20,
+      "feature_names": [
+        "AGER",
+        "WFDC2",
+        "ADAMTS13",
+        "NTproBNP",
+        "HAVCR1",
+        "MMP12",
+        "BCAN",
+        "ACE2",
+        "EDA2R",
+        "age",
+        "average_SBP",
+        "sex",
+        "hypertension_treatment"
+      ],
+      "categorical_indices": [
+        11,
+        12
+      ],
+      "categorical_dimensions": [
+        2,
+        2
+      ],
+      "sample_sizes": {
+        "train": 42441,
+        "val": 4716,
+        "asian": 1086,
+        "other": 2123
+      },
+      "fold_details": [
+        {
+          "fold": 0,
+          "n_fit": 33952,
+          "n_early_stopping": 8489,
+          "best_epoch_zero_based": 24,
+          "best_validation_c_index": 0.7748576402664185,
+          "weight_file": "Total_CVD\\models\\fold_0.pt",
+          "weight_sha256": "7c6d604bd20b2a01b3ebcd83253532f282b366c183e17375093fef187454acc8"
+        },
+        {
+          "fold": 1,
+          "n_fit": 33953,
+          "n_early_stopping": 8488,
+          "best_epoch_zero_based": 23,
+          "best_validation_c_index": 0.7750781178474426,
+          "weight_file": "Total_CVD\\models\\fold_1.pt",
+          "weight_sha256": "b8bb0467caf0a5002a90414e7cf3efd83bf5e71433f057fa0cb0578ed392434f"
+        },
+        {
+          "fold": 2,
+          "n_fit": 33953,
+          "n_early_stopping": 8488,
+          "best_epoch_zero_based": 48,
+          "best_validation_c_index": 0.7853544354438782,
+          "weight_file": "Total_CVD\\models\\fold_2.pt",
+          "weight_sha256": "e0904ae0dc19edd889a78468de25f90008ae06317073a0e76f6dad3738d116b9"
+        },
+        {
+          "fold": 3,
+          "n_fit": 33953,
+          "n_early_stopping": 8488,
+          "best_epoch_zero_based": 23,
+          "best_validation_c_index": 0.7725936770439148,
+          "weight_file": "Total_CVD\\models\\fold_3.pt",
+          "weight_sha256": "93233867d6fd9a73cd4bc15afbfbd1a13c9a2ad75322a9c8ab4d122a47239bfd"
+        },
+        {
+          "fold": 4,
+          "n_fit": 33953,
+          "n_early_stopping": 8488,
+          "best_epoch_zero_based": 29,
+          "best_validation_c_index": 0.7918409109115601,
+          "weight_file": "Total_CVD\\models\\fold_4.pt",
+          "weight_sha256": "0fdbcc5e94c82526a826a66bed5eb78b5ad2d11b59475ce60d88be1ec95ce884"
+        }
+      ]
+    },
+    "release_files": {
+      "preprocessor_sha256": "aeab95023d45b056f46ad0a7a9c7e5980748d87f55ad1fd36fbf33cf7d48b1ed",
+      "copied_optuna_database_sha256": "6af5d906b77f099ef414041dfcc85cca67399bf19cc973ed72ca1fca553903bf"
+    },
+    "historical_prediction_comparison": {
+      "train": {
+        "reference_file": "all_lassonet_train.csv",
+        "reference_sha256": "bbc6fab8f8252ccc98e5106bfb5365dd0b96b7bff520b776c34e8feb8fb315ae",
+        "n_reference": 42441,
+        "n_regenerated": 42441,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 4.3677333337625225e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.6086039019761894e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.2316333387416075e-17,
+          "pearson_r": 0.9999999999999999,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 3.9137386504373094e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "val": {
+        "reference_file": "all_lassonet_val.csv",
+        "reference_sha256": "a1ac04de27dfbf7da6a807b25d98326c5773ec7d6edc918e2208bedee186be54",
+        "n_reference": 4716,
+        "n_regenerated": 4716,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 4.366436882261583e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.93129189996722e-17,
+          "mean_abs_diff": 4.5135869805507973e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.259728260681852e-17,
+          "pearson_r": 0.9999999999999999,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 3.9654763428261175e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "asian": {
+        "reference_file": "all_lassonet_asian.csv",
+        "reference_sha256": "6f2487cc48ca6f981fbe916821f4202f76f4118da4b18bbe57d40331b22b9841",
+        "n_reference": 1086,
+        "n_regenerated": 1086,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 5.210964162537939e-17,
+          "pearson_r": 0.9999999999999998,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.5587606484935625e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.393993865301106e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.0254849280010605e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "other": {
+        "reference_file": "all_lassonet_other.csv",
+        "reference_sha256": "55591f82daecd947ac0fdf6f67832cdb1a104ee1a433bede09b3779c060de838",
+        "n_reference": 2123,
+        "n_regenerated": 2123,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 5.2199866037579654e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.707357635920366e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.363078760480244e-17,
+          "pearson_r": 0.9999999999999999,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.2240067229808315e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      }
+    }
+  },
+  {
+    "artifact": "RP-SAINT five-fold survival ensemble",
+    "outcome": "ASCVD",
+    "created_utc": "2026-10-04T11:58:06.297333+00:00",
+    "source_code": {
+      "saint_py_sha256": "ffef1a83a0b463c464e7f18edc0ee26eeade12539be705e0b836370a9bceda98",
+      "load_data_py_sha256": "bea8c7bb622e2892f0efe631a452b08d49258ac5cd9723376fab72316697d17b",
+      "config_sha256": "d9803d9588d760d4ea98a215ae85682ae8f80507f79b0914f9271cbf4e36844d"
+    },
+    "optuna": {
+      "study_name": "SAINT_UKB_ASCVD_all_lassonet_Kneedle",
+      "database_sha256": "407a845810ea899dae52ed1d184de02d7b46d1302c3da99bfddb561f8ef7a02b",
+      "n_trials": 20,
+      "best_trial_number": 18,
+      "best_value": 0.745259366110363,
+      "best_params": {
+        "dim": 64,
+        "depth": 1,
+        "heads": 4,
+        "dropout": 0.6770547456883119
+      },
+      "best_n_epochs_user_attr": 25
+    },
+    "training": {
+      "python": "3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]",
+      "torch": "2.4.1",
+      "cuda": "11.8",
+      "device": "NVIDIA GeForce RTX 4060 Ti",
+      "seed": 221,
+      "holdout_ratio": 0.1,
+      "folds": 5,
+      "batch_size": 1024,
+      "early_stopping_rounds": 20,
+      "feature_names": [
+        "ADAMTS13",
+        "MMP12",
+        "BCAN",
+        "HAVCR1",
+        "PGF",
+        "PLA2G7",
+        "WFDC2",
+        "CDCP1",
+        "age",
+        "average_SBP",
+        "sex"
+      ],
+      "categorical_indices": [
+        10
+      ],
+      "categorical_dimensions": [
+        2
+      ],
+      "sample_sizes": {
+        "train": 42635,
+        "val": 4738,
+        "asian": 1089,
+        "other": 2130
+      },
+      "fold_details": [
+        {
+          "fold": 0,
+          "n_fit": 34108,
+          "n_early_stopping": 8527,
+          "best_epoch_zero_based": 1,
+          "best_validation_c_index": 0.7368097901344299,
+          "weight_file": "ASCVD\\models\\fold_0.pt",
+          "weight_sha256": "28c33bd7e490ec4a7768e289c85da434cb434bbb55169000fe1c9d3358977df4"
+        },
+        {
+          "fold": 1,
+          "n_fit": 34108,
+          "n_early_stopping": 8527,
+          "best_epoch_zero_based": 4,
+          "best_validation_c_index": 0.7394835948944092,
+          "weight_file": "ASCVD\\models\\fold_1.pt",
+          "weight_sha256": "4abe084dfdbb652a13ea19116428ad5399bce38f6ecf81f2f767e347d6c16938"
+        },
+        {
+          "fold": 2,
+          "n_fit": 34108,
+          "n_early_stopping": 8527,
+          "best_epoch_zero_based": 37,
+          "best_validation_c_index": 0.7296637296676636,
+          "weight_file": "ASCVD\\models\\fold_2.pt",
+          "weight_sha256": "12d78f084a6247a259554f897391dd2b6fa9a99bf271639ac4ca13951cc16684"
+        },
+        {
+          "fold": 3,
+          "n_fit": 34108,
+          "n_early_stopping": 8527,
+          "best_epoch_zero_based": 49,
+          "best_validation_c_index": 0.7525017261505127,
+          "weight_file": "ASCVD\\models\\fold_3.pt",
+          "weight_sha256": "aa358f50d2c8857c48d67ebea30d0b6be90767064cde7dddd234aee50adf1fd3"
+        },
+        {
+          "fold": 4,
+          "n_fit": 34108,
+          "n_early_stopping": 8527,
+          "best_epoch_zero_based": 36,
+          "best_validation_c_index": 0.7678380012512207,
+          "weight_file": "ASCVD\\models\\fold_4.pt",
+          "weight_sha256": "40a7fc1be30513ec52d0c546aa2a17a39f39e398cf141e37533bb0be05af0105"
+        }
+      ]
+    },
+    "release_files": {
+      "preprocessor_sha256": "a5e0b24e74cb8077447c5ce88ad50da0b422ea7f723d2bea039938e93052ebd8",
+      "copied_optuna_database_sha256": "407a845810ea899dae52ed1d184de02d7b46d1302c3da99bfddb561f8ef7a02b"
+    },
+    "historical_prediction_comparison": {
+      "train": {
+        "reference_file": "all_lassonet_train.csv",
+        "reference_sha256": "3ec543940485c04273b49828252c64c06e0c5c11d1b0516a118e917b5f11741b",
+        "n_reference": 42635,
+        "n_regenerated": 42635,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 4.440892098500626e-16,
+          "mean_abs_diff": 3.223743194794787e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.74945448556841e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.482244614526557e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.3517156751305017e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "val": {
+        "reference_file": "all_lassonet_val.csv",
+        "reference_sha256": "baf4a7b67c076201a82c09bbad56aecc5691c03790d671658dc6eeb92dc1ee54",
+        "n_reference": 4738,
+        "n_regenerated": 4738,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 4.440892098500626e-16,
+          "mean_abs_diff": 3.055173256080665e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.6365546641376195e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.4712241302370756e-17,
+          "pearson_r": 0.9999999999999998,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.348698758511529e-17,
+          "pearson_r": 0.9999999999999998,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "asian": {
+        "reference_file": "all_lassonet_asian.csv",
+        "reference_sha256": "5ba4a4bda8c116b82b55b57b29b8b7b3261e303975caf94ff6a0854b693d5401",
+        "n_reference": 1089,
+        "n_regenerated": 1089,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 4.440892098500626e-16,
+          "mean_abs_diff": 3.127121814224123e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.93129189996722e-17,
+          "mean_abs_diff": 4.683156028568517e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.7114707299326006e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.481886688633099e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "other": {
+        "reference_file": "all_lassonet_other.csv",
+        "reference_sha256": "ccba7e567063e5eeb61122c6acf52e2da6d62e8545bbf7b6353426c75a8cded2",
+        "n_reference": 2130,
+        "n_regenerated": 2130,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 4.440892098500626e-16,
+          "mean_abs_diff": 4.301989511721891e-17,
+          "pearson_r": 0.9999999999999998,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.8968627389188374e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.6064441710730136e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.528178008612276e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      }
+    }
+  },
+  {
+    "artifact": "RP-SAINT five-fold survival ensemble",
+    "outcome": "HF",
+    "created_utc": "2026-10-04T12:03:24.683896+00:00",
+    "source_code": {
+      "saint_py_sha256": "ffef1a83a0b463c464e7f18edc0ee26eeade12539be705e0b836370a9bceda98",
+      "load_data_py_sha256": "bea8c7bb622e2892f0efe631a452b08d49258ac5cd9723376fab72316697d17b",
+      "config_sha256": "d9803d9588d760d4ea98a215ae85682ae8f80507f79b0914f9271cbf4e36844d"
+    },
+    "optuna": {
+      "study_name": "SAINT_UKB_HF_all_lassonet_Kneedle",
+      "database_sha256": "e09b97b1b39ea913aa52dbcd1ee05a642a3f061c88a5d0b62d9f179b4ce61b8d",
+      "n_trials": 20,
+      "best_trial_number": 15,
+      "best_value": 0.8478469241793416,
+      "best_params": {
+        "dim": 64,
+        "depth": 1,
+        "heads": 2,
+        "dropout": 0.5125625559037138
+      },
+      "best_n_epochs_user_attr": 5
+    },
+    "training": {
+      "python": "3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]",
+      "torch": "2.4.1",
+      "cuda": "11.8",
+      "device": "NVIDIA GeForce RTX 4060 Ti",
+      "seed": 221,
+      "holdout_ratio": 0.1,
+      "folds": 5,
+      "batch_size": 1024,
+      "early_stopping_rounds": 20,
+      "feature_names": [
+        "ART3",
+        "AGER",
+        "NTproBNP",
+        "WFDC2",
+        "RGMA",
+        "BCAN",
+        "GDF15",
+        "ACE2",
+        "CDCP1",
+        "age",
+        "BMI",
+        "sex",
+        "hypertension_treatment",
+        "Cholesterol_treatment"
+      ],
+      "categorical_indices": [
+        11,
+        12,
+        13
+      ],
+      "categorical_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "sample_sizes": {
+        "train": 44083,
+        "val": 4899,
+        "asian": 1128,
+        "other": 2176
+      },
+      "fold_details": [
+        {
+          "fold": 0,
+          "n_fit": 35266,
+          "n_early_stopping": 8817,
+          "best_epoch_zero_based": 1,
+          "best_validation_c_index": 0.8439719080924988,
+          "weight_file": "HF\\models\\fold_0.pt",
+          "weight_sha256": "e178fcfd4d375731cc3fb532e4ec3f4f22bb0ba3a118b3e058facc795615c54d"
+        },
+        {
+          "fold": 1,
+          "n_fit": 35266,
+          "n_early_stopping": 8817,
+          "best_epoch_zero_based": 13,
+          "best_validation_c_index": 0.842779815196991,
+          "weight_file": "HF\\models\\fold_1.pt",
+          "weight_sha256": "65f5aac39c120b214cdda15205d039db0edb4a78e18e0cba9202e8f187c9d77f"
+        },
+        {
+          "fold": 2,
+          "n_fit": 35266,
+          "n_early_stopping": 8817,
+          "best_epoch_zero_based": 2,
+          "best_validation_c_index": 0.8328386545181274,
+          "weight_file": "HF\\models\\fold_2.pt",
+          "weight_sha256": "606f6d2d919c345f5db9678f0a392ff491b96726109d1877e206dc8c75c176b5"
+        },
+        {
+          "fold": 3,
+          "n_fit": 35267,
+          "n_early_stopping": 8816,
+          "best_epoch_zero_based": 3,
+          "best_validation_c_index": 0.8502137660980225,
+          "weight_file": "HF\\models\\fold_3.pt",
+          "weight_sha256": "d8e0bb525ae6521fcaaf919ac7c6ff3cb31d298fef66504d2e4086f613075563"
+        },
+        {
+          "fold": 4,
+          "n_fit": 35267,
+          "n_early_stopping": 8816,
+          "best_epoch_zero_based": 10,
+          "best_validation_c_index": 0.869430422782898,
+          "weight_file": "HF\\models\\fold_4.pt",
+          "weight_sha256": "26b7402cdff0471f1c285b16acb087b5029f10ff15e97cc9359d6baec6b905c6"
+        }
+      ]
+    },
+    "release_files": {
+      "preprocessor_sha256": "9d54cd31390015fc2bad80285b3e2de98422582abf578767aed387b2ae8f66bc",
+      "copied_optuna_database_sha256": "e09b97b1b39ea913aa52dbcd1ee05a642a3f061c88a5d0b62d9f179b4ce61b8d"
+    },
+    "historical_prediction_comparison": {
+      "train": {
+        "reference_file": "all_lassonet_train.csv",
+        "reference_sha256": "0cdff14d202cdc8ea4da782d4c07a7072f9e3c7118cc374a4825d6f1da3b5cec",
+        "n_reference": 44083,
+        "n_regenerated": 44083,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 4.6835409495893255e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.996344030316351e-17,
+          "mean_abs_diff": 4.787283711136841e-17,
+          "pearson_r": 0.9999999999999999,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.518361335653447e-17,
+          "pearson_r": 0.9999999999999999,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.313717837421551e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "val": {
+        "reference_file": "all_lassonet_val.csv",
+        "reference_sha256": "cf42592576afc01deff7b15522a537e52290737525765b4b25d40091b4372a7b",
+        "n_reference": 4899,
+        "n_regenerated": 4899,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 4.5211894525390474e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.744782083052179e-17,
+          "pearson_r": 0.9999999999999999,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.5884569051471246e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 1.1102230246251565e-16,
+          "mean_abs_diff": 4.2683350928473014e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "asian": {
+        "reference_file": "all_lassonet_asian.csv",
+        "reference_sha256": "82c79b9eed9178bdf2ceb7a5aad611bb37fbd279632d55fb7eafbf2a511ef4ec",
+        "n_reference": 1128,
+        "n_regenerated": 1128,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 4.9361956356529756e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.996344030316351e-17,
+          "mean_abs_diff": 4.674843319411368e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.93129189996722e-17,
+          "mean_abs_diff": 4.530292641468021e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.307896632009071e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      },
+      "other": {
+        "reference_file": "all_lassonet_other.csv",
+        "reference_sha256": "ce24e51f9b0453bf44b85469b4785aac8e64e3f0db0de5e974ed6a0505f367de",
+        "n_reference": 2176,
+        "n_regenerated": 2176,
+        "row_count_match": true,
+        "outcome_time_max_abs_diff": 0.0,
+        "outcome_event_exact_match": true,
+        "risk_score": {
+          "max_abs_diff": 8.881784197001252e-16,
+          "mean_abs_diff": 4.8066329530502356e-17,
+          "pearson_r": 0.9999999999999998,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_10yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.8923128269383824e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_15yr": {
+          "max_abs_diff": 9.974659986866641e-17,
+          "mean_abs_diff": 4.724789640158476e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        },
+        "prob_20yr": {
+          "max_abs_diff": 9.8879238130678e-17,
+          "mean_abs_diff": 4.5206048744027037e-17,
+          "pearson_r": 1.0,
+          "allclose_rtol_1e-5_atol_1e-7": true
+        }
+      }
+    }
+  }
+]

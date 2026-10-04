@@ -29,10 +29,10 @@ def test_clinical_loader_keeps_outcomes_out_of_features(tmp_path):
     )
 
     assert names == [name for name in CLINICAL_FEATURES if name not in {
-        "sex", "ever_smoked", "Diabetes_baseline_1", "Cholesterol_treatment",
+        "sex", "ever_smoked", "Diabetes_baseline", "Cholesterol_treatment",
         "hypertension_treatment"
     }] + [
-        "sex", "ever_smoked", "Diabetes_baseline_1", "Cholesterol_treatment",
+        "sex", "ever_smoked", "Diabetes_baseline", "Cholesterol_treatment",
         "hypertension_treatment"
     ]
     assert x_eur.shape[0] == y_eur.shape[0] == 2

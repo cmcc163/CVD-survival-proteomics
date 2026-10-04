@@ -1,0 +1,7 @@
+{
+  "n_repeats": 100,
+  "threshold": 0.8,
+  "n_selected": 83,
+  "avg_c_index": 0.7826770010979675,
+  "avg_num_features": 783.03
+}

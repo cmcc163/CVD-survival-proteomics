@@ -1,103 +1,72 @@
-# Plasma proteomics and deep survival learning for cardiovascular risk prediction
+# Cardiovascular survival prediction with plasma proteomics
 
-This repository contains the analysis code for predicting incident total
-cardiovascular disease, atherosclerotic cardiovascular disease, and heart
-failure in UK Biobank. It compares PREVENT, refitted Cox regression, XGBoost,
-MLP, TabNet, NODE, FT-Transformer, SAINT, and a TabPFN-derived survival model
-under clinical-only, proteomic-only, and combined predictor configurations.
+Code and trained models for proteomics-based prediction of incident Total CVD, ASCVD, and HF in UK Biobank.
 
-Only protein panels selected by the repeated-split stability LassoNet procedure
-are used. Participant-level UK Biobank data and derived participant-level
-predictions are not distributed.
+中文说明：[README_cn.md](README_cn.md)
 
-## Analysis workflow
+## Workflow
 
-1. Select endpoint-specific proteins using 100 repeated 70:30 splits of the
-   European development data and an 80% selection-frequency threshold.
-2. Reserve 10% of European participants as the final hold-out set.
-3. Tune each model with 100 Optuna trials and five-fold cross-validation in the
-   remaining European development set.
-4. Retain the five fold-specific models and evaluate their averaged predictions
-   in the European hold-out, Asian ancestry, and other ancestry cohorts.
-5. Evaluate C-index, 10-year time-dependent AUC, calibration, and decision-curve
-   net benefit with 1,000 bootstrap samples.
-6. Compute direct TreeSHAP explanations for XGBoost and surrogate TreeSHAP
-   explanations for non-tree models.
-7. Validate consensus interactions with adjusted Cox models and train the
-   Kneedle-selected reduced-panel SAINT model.
-8. Integrate protein importance with MAPLE and SuSiE results when the workstation
-   genetics scripts are added.
+1. Select stable proteins using repeated LassoNet.
+2. Tune models with Optuna and train five-fold ensembles.
+3. Generate ensemble and out-of-fold predictions.
+4. Evaluate discrimination, calibration, and clinical utility.
+5. Perform model interpretation and reduced-panel analyses.
 
-## Installation
+Models include Cox, XGBoost, MLP, TabNet, NODE, FT-Transformer, SAINT, and TabPFN.
 
-Create the Python 3.10.1 environment:
+## Setup
 
 ```bash
 conda env create -f environment.yml
 conda activate cvd-survival
+python examples/run_synthetic_workflow.py
 ```
 
-Install the R packages listed in `requirements-r.txt` using the R package
-management approach used by your computing environment. Scripts do not install
-packages automatically.
+The release environment uses Python 3.10.1. R dependencies are listed in `requirements-r.txt`.
 
-## Local data configuration
+## Input and configuration
 
-Copy `config/paths.example.yml` to `config/paths.local.yml`. The local file is
-ignored by Git and can be loaded with `--config config/paths.local.yml`. See
-`docs/data_contract.md` for expected columns. Direct CLI values take precedence
-over YAML values.
+Copy `config/paths.example.yml` to `config/paths.local.yml` and set the local input and output paths.
 
-## Command-line usage
+Each endpoint file requires `eid`, `Ethnic`, `Is_Incident`, survival time, and the selected predictors. Clinical variables are:
 
-Every command runs one explicit outcome, predictor set, and model. There are no
-hard-coded experiment loops. For example:
+`age`, `sex`, `ever_smoked`, `Diabetes_baseline`, `Cholesterol_treatment`, `hdl_cholesterol`, `non_hdl_cholesterol`, `hypertension_treatment`, `average_SBP`, `eGFR`, and `BMI`.
+
+If `non_hdl_cholesterol` is absent, it is calculated from total and HDL cholesterol. Protein-panel files use the column `Protein_Name`.
+
+## Run
 
 ```bash
-python run.py select-proteins \
-  --disease-type ASCVD \
-  --data-type all \
-  --model-name XGBoost \
-  --path /secure/data/ASCVD/followup_incident_20260122.csv \
-  --all-proteins-path /secure/data/all_protein_names.csv
+# Show available stages
+python run.py --help
 
-python run.py train \
-  --disease-type ASCVD \
-  --data-type all \
-  --model-name SAINT \
-  --path /secure/data/ASCVD/followup_incident_20260122.csv \
-  --protein-path /secure/panels/ASCVD/lassonet_protein.csv \
-  --n-trials 100
+# Train one configuration
+python run.py train --config config/paths.local.yml \
+  --disease-type ASCVD --data-type all --model-name SAINT \
+  --protein-path features/lassonet/ASCVD/lassonet_protein.csv
 
-python run.py predict \
-  --disease-type ASCVD \
-  --data-type all \
-  --model-name SAINT \
-  --path /secure/data/ASCVD/followup_incident_20260122.csv \
-  --protein-path /secure/panels/ASCVD/lassonet_protein.csv
+# Generate ensemble predictions
+python run.py predict --config config/paths.local.yml \
+  --disease-type ASCVD --data-type all --model-name SAINT \
+  --protein-path features/lassonet/ASCVD/lassonet_protein.csv
 ```
 
-Use `FT-Transformer` or `SAINT` explicitly. They have separate public classes:
-FT-Transformer uses column attention and SAINT uses combined column-row
-attention. Their shared survival-training implementation is internal.
+Downstream manuscript analyses are under `analysis/`. MAPLE/SuSiE core scripts will be added under `genetics/maple_susie/`.
 
-Run `python run.py --help` to list stages, followed by a stage and `--help` to
-view modelling arguments.
+## Released artifacts
 
-## Repository layout
+- `features/lassonet/`: selection frequencies and final protein panels.
+- `artifacts/models/`: five-fold main-analysis models.
+- `artifacts/optuna/`: corresponding Optuna studies.
+- `artifacts/rp_saint/`: RP-SAINT weights, preprocessors, Breslow estimators, and validation metadata.
 
-- `models/`: manuscript model implementations.
-- `utils/`: data contracts, fold-local preprocessing, survival metrics, paths,
-  and persistence helpers.
-- `scripts/core/`: import-only implementations called by `run.py`.
-- `analysis/`: final population, performance, interpretation, genetics,
-  interaction, and reduced-panel analyses assembled from the manuscript work.
-- `genetics/maple_susie/`: reserved location for workstation-only source code.
-- `docs/`: data and reproducibility documentation.
+The release contains 360 main-analysis fold models, 72 Optuna databases, and 15 RP-SAINT fold models. RP-SAINT predictions reproduce the historical results to floating-point precision. Binary artifacts are managed with Git LFS.
 
-## Data availability
+## Validation
 
-UK Biobank data are available to approved researchers through the UK Biobank
-access process. Users must construct endpoint-specific input files under their
-own authorization. Do not commit `eid`, raw data, predictions, embeddings,
-checkpoints, Optuna databases, or licensed genetic summary data.
+```bash
+python -m pytest -q
+python -m tools.validate_release_runtime --artifact-dir artifacts
+```
+
+Citation metadata are provided in `CITATION.cff`. The code is released under the MIT License.

@@ -29,13 +29,13 @@ clinical_label_map <- c(
   "age" = "Age",
   "sex" = "Sex",
   "ever_smoked" = "Smoking status",
-  "Diabetes_baseline_1" = "Diabetes",
+  "Diabetes_baseline" = "Diabetes",
   "Cholesterol_treatment" = "Lipid-lowering medication",
   "hdl_cholesterol" = "HDL-C",
   "non_hdl_cholesterol" = "Non-HDL-C",
   "hypertension_treatment" = "Antihypertensive medication",
   "average_SBP" = "SBP",
-  "eGFR_SCysC" = "eGFR",
+  "eGFR" = "eGFR",
   "BMI" = "BMI"
 )
 

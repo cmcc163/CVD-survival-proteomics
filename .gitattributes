@@ -1,0 +1,10 @@
+# Publication model artifacts are versioned through Git LFS.
+artifacts/models/**/*.pt filter=lfs diff=lfs merge=lfs -text
+artifacts/models/**/*.pth filter=lfs diff=lfs merge=lfs -text
+artifacts/models/**/*.pkl filter=lfs diff=lfs merge=lfs -text
+artifacts/models/**/*.joblib filter=lfs diff=lfs merge=lfs -text
+artifacts/optuna/**/*.db filter=lfs diff=lfs merge=lfs -text
+artifacts/optuna/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
+artifacts/rp_saint/**/*.pt filter=lfs diff=lfs merge=lfs -text
+artifacts/rp_saint/**/*.pkl filter=lfs diff=lfs merge=lfs -text
+artifacts/rp_saint/**/*.db filter=lfs diff=lfs merge=lfs -text
