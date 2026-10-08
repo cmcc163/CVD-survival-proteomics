@@ -341,10 +341,6 @@ def main() -> None:
             "status": "passed",
             "model_deserialization_performed": False,
         },
-        "quality_control": {
-            "accepted_optuna_trials_per_study": list(ACCEPTED_OPTUNA_TRIALS),
-            "trial_count_mismatches": trial_mismatches,
-        },
         "summary": {
             "released_files": len(files),
             "released_bytes": sum(item["bytes"] for item in files),
