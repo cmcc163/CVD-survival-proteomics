@@ -28,9 +28,21 @@ The release environment uses Python 3.10.1. R dependencies are listed in `requir
 
 Copy `config/paths.example.yml` to `config/paths.local.yml` and set the local input and output paths.
 
-Each endpoint file requires `eid`, `Ethnic`, `Is_Incident`, survival time, and the selected predictors. Clinical variables are:
+Each endpoint file requires `eid`, `Ethnic`, `Is_Incident`, survival time, and the selected predictors. The predictor set included age, sex, smoking status, diabetes, lipid-lowering medication use, high-density lipoprotein (HDL) cholesterol, non-HDL cholesterol, antihypertensive medication use, systolic blood pressure, estimated glomerular filtration rate (eGFR), and body mass index (BMI).
 
-`age`, `sex`, `ever_smoked`, `Diabetes_baseline`, `Cholesterol_treatment`, `hdl_cholesterol`, `non_hdl_cholesterol`, `hypertension_treatment`, `average_SBP`, `eGFR`, and `BMI`.
+| Predictor | Input field |
+| --- | --- |
+| Age | `age` |
+| Sex | `sex` |
+| Smoking status (ever smoked) | `ever_smoked` |
+| Diabetes | `Diabetes_baseline` |
+| Lipid-lowering medication use | `Cholesterol_treatment` |
+| HDL cholesterol | `hdl_cholesterol` |
+| Non-HDL cholesterol | `non_hdl_cholesterol` |
+| Antihypertensive medication use | `hypertension_treatment` |
+| Systolic blood pressure | `average_SBP` |
+| eGFR | `eGFR` |
+| BMI | `BMI` |
 
 If `non_hdl_cholesterol` is absent, it is calculated from total and HDL cholesterol. Protein-panel files use the column `Protein_Name`.
 
@@ -51,7 +63,7 @@ python run.py predict --config config/paths.local.yml \
   --protein-path features/lassonet/ASCVD/lassonet_protein.csv
 ```
 
-Downstream manuscript analyses are under `analysis/`. MAPLE/SuSiE core scripts will be added under `genetics/maple_susie/`.
+Downstream manuscript analyses are under `analysis/`. [MAPLE/SuSiE scripts](genetics/maple_susie/README.md) cover outcome preparation, sample-structure estimation, MAPLE, colocalization, and sensitivity analyses.
 
 ## Released artifacts
 

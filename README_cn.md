@@ -28,7 +28,7 @@ python examples/run_synthetic_workflow.py
 
 复制 `config/paths.example.yml` 为 `config/paths.local.yml`，填写本机输入和输出路径。
 
-每个结局文件需要包含 `eid`、`Ethnic`、`Is_Incident`、生存时间和模型变量。临床变量为：
+每个结局文件需要包含 `eid`、`Ethnic`、`Is_Incident`、生存时间和模型变量。临床预测因子包括年龄、性别、吸烟状态、糖尿病、降脂药物使用、HDL胆固醇、非HDL胆固醇、降压药物使用、收缩压、eGFR和BMI，对应字段依次为：
 
 `age`、`sex`、`ever_smoked`、`Diabetes_baseline`、`Cholesterol_treatment`、`hdl_cholesterol`、`non_hdl_cholesterol`、`hypertension_treatment`、`average_SBP`、`eGFR` 和 `BMI`。
 
@@ -51,7 +51,7 @@ python run.py predict --config config/paths.local.yml \
   --protein-path features/lassonet/ASCVD/lassonet_protein.csv
 ```
 
-论文下游分析位于 `analysis/`。MAPLE/SuSiE核心代码后续补入 `genetics/maple_susie/`。
+论文下游分析位于 `analysis/`。[MAPLE/SuSiE代码](genetics/maple_susie/README.md)包括结局数据整理、样本结构估计、MAPLE、共定位和敏感性分析。
 
 ## 发布文件
 

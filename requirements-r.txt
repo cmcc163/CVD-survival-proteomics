@@ -13,4 +13,9 @@ stringr
 ragg
 data.table
 gridExtra
+coloc
+susieR
+ieugwasr
+TwoSampleMR
+MAPLE
 
