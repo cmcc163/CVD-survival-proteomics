@@ -33,7 +33,7 @@ CLINICAL_VARS = {
     "average_SBP",
     "eGFR",
     "hdl_cholesterol",
-    "ever_smoked",
+    "smoking status",
     "Diabetes_baseline",
     "non_hdl_cholesterol",
 }

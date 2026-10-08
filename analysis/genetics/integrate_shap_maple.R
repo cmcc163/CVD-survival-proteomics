@@ -28,7 +28,7 @@ coloc_source <- Sys.getenv("CVD_COLOC_FILE", unset = "artifacts/genetics/coloc_s
 
 clinical_vars <- c(
   "age", "BMI", "hypertension_treatment", "Cholesterol_treatment", "sex",
-  "average_SBP", "eGFR", "hdl_cholesterol", "ever_smoked",
+  "average_SBP", "eGFR", "hdl_cholesterol", "smoking status",
   "Diabetes_baseline", "non_hdl_cholesterol"
 )
 

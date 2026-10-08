@@ -32,7 +32,7 @@ REQUIRED_COLUMNS = [
     "Ethnic",
     "age",
     "sex",
-    "ever_smoked",
+    "smoking status",
     "Diabetes_baseline",
     "Cholesterol_treatment",
     "hdl_cholesterol",
@@ -87,7 +87,7 @@ def summarize_group(df: pd.DataFrame, label: str, subset: pd.DataFrame) -> dict:
         "n": denominator,
         "Age, y": format_mean_sd(subset["age"]),
         "Male sex": format_n_pct(subset["sex"].eq(1), denominator),
-        "Ever smoked": format_n_pct(subset["ever_smoked"].eq(1), denominator),
+        "Smoking status": format_n_pct(subset["smoking status"].eq(1), denominator),
         "Diabetes": format_n_pct(subset["Diabetes_baseline"].eq(1), denominator),
         "Lipid-lowering medication": format_n_pct(
             subset["Cholesterol_treatment"].eq(1), denominator
@@ -144,7 +144,7 @@ def make_summary(df: pd.DataFrame) -> pd.DataFrame:
         for header, (_, subset) in zip(headers, groups):
             row[header] = format_n_pct(subset["ethnicity_group"].eq(category), len(subset))
         rows.append(row)
-    add_row("Ever smoked", "Ever smoked")
+    add_row("Smoking status", "Smoking status")
     add_row("Diabetes", "Diabetes")
     add_row("Lipid-lowering medication", "Lipid-lowering medication")
     add_row("HDL cholesterol, mmol/L", "HDL cholesterol, mmol/L")
@@ -447,7 +447,7 @@ def summarize_baseline_dataset(subset: pd.DataFrame) -> dict[str, str]:
         "Events, n": format_int(int(subset["Is_Incident"].sum())),
         "Age, y": format_mean_sd(subset["age"]),
         "Male sex": format_n_pct(subset["sex"].eq(1), denominator),
-        "Ever smoked": format_n_pct(subset["ever_smoked"].eq(1), denominator),
+        "Smoking status": format_n_pct(subset["smoking status"].eq(1), denominator),
         "Diabetes": format_n_pct(subset["Diabetes_baseline"].eq(1), denominator),
         "Lipid-lowering medication": format_n_pct(
             subset["Cholesterol_treatment"].eq(1), denominator
@@ -476,7 +476,7 @@ def make_dataset_baseline_summary() -> pd.DataFrame:
         "Events, n",
         "Age, y",
         "Male sex",
-        "Ever smoked",
+        "Smoking status",
         "Diabetes",
         "Lipid-lowering medication",
         "HDL cholesterol, mmol/L",

@@ -33,7 +33,7 @@ def generate(rows: int, seed: int) -> pd.DataFrame:
             "Is_Incident": (event_time <= censor_time).astype(int),
             "age": age,
             "sex": sex,
-            "ever_smoked": rng.integers(0, 2, rows),
+            "smoking status": rng.integers(0, 2, rows),
             "Diabetes_baseline": rng.binomial(1, 0.12, rows),
             "Cholesterol_treatment": rng.binomial(1, 0.25, rows),
             "hdl_cholesterol": rng.normal(1.4, 0.3, rows).clip(0.4, None),

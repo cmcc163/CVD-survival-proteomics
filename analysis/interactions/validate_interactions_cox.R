@@ -31,13 +31,13 @@ time_col <- "time"
 event_col <- "Is_Incident"
 
 clinical_vars <- c(
-  "age", "sex", "ever_smoked", "Diabetes_baseline",
+  "age", "sex", "smoking status", "Diabetes_baseline",
   "Cholesterol_treatment", "hdl_cholesterol", "non_hdl_cholesterol",
   "hypertension_treatment", "average_SBP", "eGFR", "BMI"
 )
 
 cat_vars <- c(
-  "sex", "ever_smoked", "Diabetes_baseline",
+  "sex", "smoking status", "Diabetes_baseline",
   "hypertension_treatment", "Cholesterol_treatment"
 )
 

@@ -28,7 +28,7 @@ outcome_labels <- c(
 clinical_label_map <- c(
   "age" = "Age",
   "sex" = "Sex",
-  "ever_smoked" = "Smoking status",
+  "smoking status" = "Smoking status",
   "Diabetes_baseline" = "Diabetes",
   "Cholesterol_treatment" = "Lipid-lowering medication",
   "hdl_cholesterol" = "HDL-C",

@@ -19,7 +19,7 @@ import pandas as pd
 CLINICAL_FEATURES = [
     "age",
     "sex",
-    "ever_smoked",
+    "smoking status",
     "Diabetes_baseline",
     "Cholesterol_treatment",
     "hdl_cholesterol",
@@ -31,7 +31,7 @@ CLINICAL_FEATURES = [
 ]
 CATEGORICAL_FEATURES = [
     "sex",
-    "ever_smoked",
+    "smoking status",
     "Diabetes_baseline",
     "Cholesterol_treatment",
     "hypertension_treatment",

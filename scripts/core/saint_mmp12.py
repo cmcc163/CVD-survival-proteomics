@@ -17,7 +17,7 @@ from utils.parser import get_parser
 
 # Preserve the feature order used by the original MMP12 training loader.
 FEATURES = ["age", "hdl_cholesterol", "non_hdl_cholesterol", "average_SBP",
-            "eGFR", "BMI", "MMP12", "sex", "ever_smoked", "Diabetes_baseline",
+            "eGFR", "BMI", "MMP12", "sex", "smoking status", "Diabetes_baseline",
             "hypertension_treatment", "Cholesterol_treatment"]
 CAT_INDICES = list(range(7, 12))
 OUTCOMES = ("Total_CVD", "ASCVD", "HF")

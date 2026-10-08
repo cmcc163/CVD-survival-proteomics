@@ -3,6 +3,7 @@
 from argparse import Namespace
 
 import pandas as pd
+import pytest
 
 from utils.load_data import CLINICAL_FEATURES, load_Survial_train_datas
 from models.baseline_models import process_data
@@ -29,10 +30,10 @@ def test_clinical_loader_keeps_outcomes_out_of_features(tmp_path):
     )
 
     assert names == [name for name in CLINICAL_FEATURES if name not in {
-        "sex", "ever_smoked", "Diabetes_baseline", "Cholesterol_treatment",
+        "sex", "smoking status", "Diabetes_baseline", "Cholesterol_treatment",
         "hypertension_treatment"
     }] + [
-        "sex", "ever_smoked", "Diabetes_baseline", "Cholesterol_treatment",
+        "sex", "smoking status", "Diabetes_baseline", "Cholesterol_treatment",
         "hypertension_treatment"
     ]
     assert x_eur.shape[0] == y_eur.shape[0] == 2
@@ -40,6 +41,10 @@ def test_clinical_loader_keeps_outcomes_out_of_features(tmp_path):
     assert x_other.shape[0] == y_other.shape[0] == 2
     assert "eid" not in names and "time" not in names and "Is_Incident" not in names
     assert len(cat_idx) == 5
+    assert "smoking status" in names
+    pd.read_csv(input_file).drop(columns=["smoking status"]).to_csv(input_file, index=False)
+    with pytest.raises(ValueError, match="smoking status"):
+        load_Survial_train_datas(args)
 
 
 def test_deep_encoder_is_fit_on_training_data_only():

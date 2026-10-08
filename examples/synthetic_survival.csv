@@ -1,4 +1,4 @@
-eid,Ethnic,time,Is_Incident,age,sex,ever_smoked,Diabetes_baseline,Cholesterol_treatment,hdl_cholesterol,non_hdl_cholesterol,hypertension_treatment,average_SBP,eGFR,BMI
+eid,Ethnic,time,Is_Incident,age,sex,smoking status,Diabetes_baseline,Cholesterol_treatment,hdl_cholesterol,non_hdl_cholesterol,hypertension_treatment,average_SBP,eGFR,BMI
 SYNTHETIC_0000,3001,4152,0,52,1,1,0,0,1.69272856333437,2.898015500400196,1,146.67059425289688,80.13656983634895,22.792774931818258
 SYNTHETIC_0001,3001,3384,0,55,1,1,0,0,1.1493427425227039,4.35399469750228,1,132.63174276159276,79.62240037864399,22.673074967172745
 SYNTHETIC_0002,1,1153,1,57,1,1,0,0,1.3805854499737604,3.3482709321428117,1,106.03373262453763,91.8561024452921,30.8059358424083

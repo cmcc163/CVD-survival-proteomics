@@ -38,7 +38,7 @@ class PREVENTModel_Total_CVD:
         egfr_trans_2 = (np.maximum(df['eGFR'], 60) - 90) / -15
 
         diabetes = df['Diabetes_baseline']
-        smoker = df['ever_smoked']
+        smoker = df['smoking status']
         htn_meds = df['hypertension_treatment']
         statin = df['Cholesterol_treatment']
 
@@ -121,7 +121,7 @@ class PREVENTModel_HF:
         bmi_trans_2 = (np.maximum(df['BMI'], 30) - 30) / 5
 
         diabetes = df['Diabetes_baseline']
-        smoker = df['ever_smoked']
+        smoker = df['smoking status']
         htn_meds = df['hypertension_treatment']
 
         log_odds = np.zeros(len(df))
@@ -197,7 +197,7 @@ class PREVENTModel_ASCVD:
         egfr_trans_2 = (np.maximum(df['eGFR'], 60) - 90) / -15
 
         diabetes = df['Diabetes_baseline']
-        smoker = df['ever_smoked']
+        smoker = df['smoking status']
         htn_meds = df['hypertension_treatment']
         statin = df['Cholesterol_treatment']
 
