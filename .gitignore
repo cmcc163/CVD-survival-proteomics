@@ -1,6 +1,7 @@
 # Local configuration
 config/paths.local.yml
 .env
+README_cn.md
 
 # Participant-level data and derived individual predictions
 data/

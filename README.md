@@ -2,8 +2,6 @@
 
 Code and trained models for proteomics-based prediction of incident Total CVD, ASCVD, and HF in UK Biobank.
 
-中文说明：[README_cn.md](README_cn.md)
-
 ## Workflow
 
 1. Select stable proteins using repeated LassoNet.
@@ -29,20 +27,6 @@ The release environment uses Python 3.10.1. R dependencies are listed in `requir
 Copy `config/paths.example.yml` to `config/paths.local.yml` and set the local input and output paths.
 
 Each endpoint file requires `eid`, `Ethnic`, `Is_Incident`, survival time, and the selected predictors. The predictor set included age, sex, smoking status, diabetes, lipid-lowering medication use, high-density lipoprotein (HDL) cholesterol, non-HDL cholesterol, antihypertensive medication use, systolic blood pressure, estimated glomerular filtration rate (eGFR), and body mass index (BMI).
-
-| Predictor | Input field |
-| --- | --- |
-| Age | `age` |
-| Sex | `sex` |
-| Smoking status | `ever_smoked` |
-| Diabetes | `Diabetes_baseline` |
-| Lipid-lowering medication use | `Cholesterol_treatment` |
-| HDL cholesterol | `hdl_cholesterol` |
-| Non-HDL cholesterol | `non_hdl_cholesterol` |
-| Antihypertensive medication use | `hypertension_treatment` |
-| Systolic blood pressure | `average_SBP` |
-| eGFR | `eGFR` |
-| BMI | `BMI` |
 
 If `non_hdl_cholesterol` is absent, it is calculated from total and HDL cholesterol. Protein-panel files use the column `Protein_Name`.
 
