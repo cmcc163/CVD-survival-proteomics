@@ -34,7 +34,7 @@ Each endpoint file requires `eid`, `Ethnic`, `Is_Incident`, survival time, and t
 | --- | --- |
 | Age | `age` |
 | Sex | `sex` |
-| Smoking status (ever smoked) | `ever_smoked` |
+| Smoking status | `ever_smoked` |
 | Diabetes | `Diabetes_baseline` |
 | Lipid-lowering medication use | `Cholesterol_treatment` |
 | HDL cholesterol | `hdl_cholesterol` |
