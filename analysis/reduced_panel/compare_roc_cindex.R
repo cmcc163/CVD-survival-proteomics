@@ -332,53 +332,8 @@ start_time <- Sys.time()
 roc_results <- run_roc()
 if (identical(Sys.getenv("ROC_ONLY"), "1")) {
   capture.output(sessionInfo(), file = file.path(output_dir, "session_info.txt"))
-  writeLines(c(
-    "# Figure rationale",
-    "",
-    "Selected figure: one untagged 1 x 3 composite 10-year ROC figure, ordered Total CVD, ASCVD and HF.",
-    "The figure compares RP-SAINT with PREVENT equation, refitted Cox model and SAINT using clinical predictors.",
-    "All four model curves and legend keys use the same line width.",
-    "RP-SAINT is red, SAINT is blue, PREVENT is black and the refitted Cox model is grey.",
-    "Every legend entry reports the empirical 10-year AUC and 95% confidence interval to four decimal places.",
-    "Only PNG is exported. Optional PDF export code is retained in the R script and intentionally commented out."
-  ), file.path(output_dir, "figure_rationale.md"))
   cat("Completed ROC-only update in", project_dir, "\n")
   quit(save = "no", status = 0)
 }
 cindex_results <- run_cindex()
-writeLines(c(
-  "Analysis: RP-SAINT comparison in the European hold-out set",
-  paste0("Bootstrap replicates: ", B),
-  paste0("Target horizon for ROC/AUC: ", horizon_days, " days"),
-  "C-index: Harrell's concordance index calculated from risk_score.",
-  "C-index comparison: paired participant-level nonparametric bootstrap using identical resampling indices for RP-SAINT and each comparator.",
-  "Difference: RP-SAINT C-index minus comparator C-index.",
-  "Confidence intervals: 2.5th and 97.5th percentiles of bootstrap distributions.",
-  "P values: unadjusted two-sided bootstrap sign probabilities with +1 continuity correction.",
-  "ROC/AUC: cumulative/dynamic 10-year ROC with IPCW for censoring; AUC calculated from the empirical ROC.",
-  "ROC display: binormal smoothing used only for visual presentation, matching Section 3.2; displayed AUC values are empirical.",
-  paste0("Elapsed minutes: ", round(as.numeric(difftime(Sys.time(), start_time, units = "mins")), 2))
-), file.path(output_dir, "analysis_notes.txt"))
-writeLines(c(
-  "# Data profile",
-  "",
-  "European hold-out participant-level predictions with time, event, risk_score and prob_10yr.",
-  "",
-  "- Total CVD: n = 4,716; 391 events.",
-  "- ASCVD: n = 4,738; 252 events.",
-  "- HF: n = 4,899; 233 events.",
-  "- Required fields had no missing values.",
-  "- All comparator files were row-aligned with RP-SAINT on time and event."
-), file.path(output_dir, "data_profile.md"))
-writeLines(c(
-  "# Figure rationale",
-  "",
-  "Selected figure: one 1 x 3 composite 10-year ROC figure for Total CVD, ASCVD and HF.",
-  "The figure compares RP-SAINT with PREVENT equation, refitted Cox model and SAINT using clinical predictors.",
-  "A restrained general medical-publication style is used; RP-SAINT is red with the strongest line weight, SAINT is blue, and the two clinical comparators are black and grey.",
-  "Panel titles are shown without A/B/C tags and ordered as Total CVD, ASCVD and HF.",
-  "Each legend entry reports the empirical 10-year AUC and its 95% confidence interval.",
-  "AUC labels are based on the empirical IPCW ROC, while binormal smoothing is limited to visual display.",
-  "Only PNG is exported. Optional PDF export code is retained in the R script and intentionally commented out."
-), file.path(output_dir, "figure_rationale.md"))
 cat("Completed ROC and paired C-index bootstrap analysis in", project_dir, "\n")

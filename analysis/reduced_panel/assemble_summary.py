@@ -242,20 +242,6 @@ def main() -> None:
         selected.to_excel(writer, index=False, sheet_name="Kneedle selected predictors")
     autosize(out_xlsx)
 
-    notes = "\n".join(
-        [
-            "3.6 reduced predictor panel implementation notes",
-            "",
-            "Scope: Total CVD, ASCVD, and HF in the European hold-out set.",
-            "Only the SAINT reduced predictor panel was newly calculated in this folder.",
-            "All PREVENT, Refitted Cox model, and original SAINT values were copied from the Section 3.2 output tables to preserve consistency with the manuscript.",
-            "Discrimination: Python, matching Section 3.2. Point estimates were recalculated from Kneedle/SAINT all_lassonet_val.csv; CIs were parsed from the reduced SAINT training results.txt.",
-            "Calibration: R, matching Section 3.2 calculate_calibration_metrics_R.R, with 500 bootstrap resamples.",
-            "Clinical utility: R, matching Section 3.2 calculate_clinical_utility_net_benefit.R, with 500 bootstrap resamples.",
-            "No implementation docx is generated.",
-        ]
-    )
-    (OUT_DIR / "需求文档.txt").write_text(notes, encoding="utf-8-sig")
     print(f"Saved {out_xlsx}")
 
 

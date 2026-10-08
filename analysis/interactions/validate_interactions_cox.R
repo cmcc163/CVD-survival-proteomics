@@ -349,31 +349,6 @@ fit_interaction_cox <- function(outcome, data, row) {
   )
 }
 
-write_methods_note <- function() {
-  note <- c(
-    "# Top20 interaction Cox validation",
-    "",
-    "## Consensus rank",
-    "",
-    "ConsensusRank is computed within each outcome by ranking all feature pairs in descending order of MeanInteractionSharePct.",
-    "MeanInteractionSharePct is the average, across the seven all_lassonet model classes, of the within-model share of total off-diagonal TreeSHAP interaction strength for that feature pair.",
-    "Therefore, Top20 means the 20 pairs with the largest cross-model mean normalized interaction share within each outcome.",
-    "",
-    "## Cox model specification",
-    "",
-    "For each outcome, the Top20 consensus interactions were tested one at a time.",
-    "",
-    "- Clinical-protein pair: 11 clinical variables + the protein main effect + clinical:protein interaction.",
-    "- Clinical-clinical pair: 11 clinical variables + clinical:clinical interaction.",
-    "- Protein-protein pair: 11 clinical variables + two protein main effects + protein:protein interaction.",
-    "",
-    "The 11 clinical variables are age, sex, ever_smoked, Diabetes_baseline, Cholesterol_treatment, hdl_cholesterol, non_hdl_cholesterol, hypertension_treatment, average_SBP, eGFR, and BMI.",
-    "Continuous clinical variables and proteins are standardized before constructing interaction terms. Categorical variables are label-encoded to follow the training preprocessing logic.",
-    "Each interaction is fitted as a separate Cox model with complete-case data for the variables required by that model."
-  )
-  writeLines(note, file.path(output_dir, "cox_interaction_top20_methods.md"), useBytes = TRUE)
-}
-
 top20 <- read_top20_interactions()
 
 all_interactions <- list()
@@ -423,6 +398,5 @@ openxlsx::write.xlsx(
   overwrite = TRUE
 )
 
-write_methods_note()
 
 cat("Wrote:", output_xlsx, "\n")

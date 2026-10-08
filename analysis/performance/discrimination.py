@@ -613,36 +613,6 @@ def write_metric_docx(data: pd.DataFrame, path: Path, title_prefix: str, title: 
     document.save(path)
 
 
-def write_readme() -> None:
-    text = """3.2 Model performance evaluation 文件夹说明
-
-本文件夹保存论文结果部分 3.2「Model performance evaluation」中模型区分度评价的可复现脚本和表格输出。
-
-1. calculate_discrimination_metrics.py
-   用于重新计算欧洲 hold-out set 中各模型的 C-index 和 10-year time-dependent AUC 点估计。
-   点估计基于 saved_predictions 中保存的完整预测结果重新计算；95% CI 来自 summary.xlsx 中的 bootstrap 2.5%-97.5% 分位数。
-
-2. Table2_cindex_european_holdout.xlsx / Table2_cindex_european_holdout.docx
-   正文 Table 2。展示欧洲 hold-out set 中各模型的 C-index，保留 4 位小数。
-   行按 Clinical predictors only、Protein markers only、Clinical predictors plus protein markers 分组；
-   每个分组下按 Total CVD、ASCVD 和 HF 三个结局排列，列为模型。
-
-3. Supplementary_Table_cindex_external_validation.xlsx / Supplementary_Table_cindex_external_validation.docx
-   补充表 3。展示 Asian ancestry 和 Other ancestry 验证集中各模型的 C-index，保留 4 位小数。
-
-4. Supplementary_Table_10yr_AUC_validation_sets.xlsx / Supplementary_Table_10yr_AUC_validation_sets.docx
-   补充表。展示 European hold-out set、Asian ancestry 和 Other ancestry 验证集中各模型的
-   10-year time-dependent AUC，保留 4 位小数。
-
-主要计算口径：
-- C-index 使用 risk_score 计算；risk_score 越高表示风险越高。
-- 10-year time-dependent AUC 使用 prob_10yr 计算，时间点为 10 年。
-- PREVENT equation 和 Refitted Cox model 使用规范化论文表述；其他模型名保留原始简称。
-- No. of protein markers 来自各结局目录中的 lassonet_protein.csv。
-"""
-    (OUTPUT_DIR / "文件说明.txt").write_text(text, encoding="utf-8")
-
-
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     cindex = build_metric_wide("C-index", validation="european")
@@ -692,7 +662,6 @@ def main() -> None:
         auc10,
         OUTPUT_DIR / "Supplementary_Table_10yr_AUC_validation_sets.docx",
     )
-    write_readme()
 
     print(f"Wrote {cindex_out}")
     print(f"Wrote {cindex_external_out}")

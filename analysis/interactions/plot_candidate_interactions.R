@@ -253,17 +253,4 @@ build_top_figures <- function(top_n) {
 build_top_figures(10)
 build_top_figures(20)
 
-plot_notes <- c(
-  "R plotting notes for candidate predictor interactions",
-  "",
-  "1. plot_candidate_interactions.R redraws the 3.5 interaction figures with ggplot2.",
-  "2. Model order follows the discrimination figures: XGBoost, MLP, TabNet, NODE, FT-Transformer, SAINT, TabPFN.",
-  "3. Model colours and shapes follow the 3.2 C-index line-plot legend where model-specific encodings are needed.",
-  "4. Heatmap values are within-model shares of total off-diagonal pairwise interaction strength.",
-  "5. Bubble size is the number of models in which the pair ranked among the same Top N threshold shown in the file name.",
-  "6. Top10 and Top20 versions are exported separately.",
-  "7. PNG and PDF outputs are written for each figure."
-)
-writeLines(plot_notes, file.path(output_dir, "candidate_interaction_R_plotting_notes.txt"), useBytes = TRUE)
-
 cat("Wrote R interaction figures to:", output_dir, "\n")

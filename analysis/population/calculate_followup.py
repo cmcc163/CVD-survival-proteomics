@@ -83,26 +83,8 @@ def main() -> None:
         calculate_person_years(outcome, path)
         for outcome, path in OUTCOME_FILES.items()
     )
-    notes = pd.DataFrame(
-        {
-            "Item": [
-                "Follow-up definition",
-                "Person-years calculation",
-                "Exclusions",
-                "Interpretation",
-            ],
-            "Description": [
-                "Event_Date minus baseline_date, consistent with make_table1_total_cvd.py.",
-                "For each participant, follow-up days / 365.25; total person-years is the sum across included participants.",
-                "Missing follow-up time, missing Is_Incident, missing Ethnic, or follow-up time <= 0.",
-                "Total follow-up is reported separately for Total CVD, ASCVD, and HF because the endpoint-specific analytic cohorts differ.",
-            ],
-        }
-    )
-
     with pd.ExcelWriter(OUTPUT_FILE, engine="openpyxl") as writer:
         summary.to_excel(writer, sheet_name="Person-years summary", index=False)
-        notes.to_excel(writer, sheet_name="Calculation notes", index=False)
     format_workbook(OUTPUT_FILE)
     print(summary[["Outcome", "Included participants, n", "Incident events, n", "Total follow-up, person-years"]].to_string(index=False))
     print(f"Wrote {OUTPUT_FILE}")

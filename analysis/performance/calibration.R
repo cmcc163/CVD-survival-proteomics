@@ -346,18 +346,6 @@ writeData(wb, "Slope_wide", slope_wide)
 excel_file <- file.path(out_dir, "Calibration_metrics_R_bootstrap_validation_sets.xlsx")
 saveWorkbook(wb, excel_file, overwrite = TRUE)
 
-readme <- paste0(
-  "校准度R语言计算输出说明\n\n",
-  "1. calculate_calibration_metrics_R.R\n",
-  "   使用R语言 survival::survfit 和 survival::coxph 计算10年校准指标，与旧版校准曲线脚本保持一致。\n\n",
-  "2. Calibration_metrics_R_bootstrap_validation_sets.xlsx\n",
-  "   多sheet Excel文件，包含长格式指标、格式化指标、校准曲线十分位数据、OE排序宽表、ICI排序宽表、校准斜率宽表。\n",
-  "   指标包括O:E ratio、calibration slope和integrated calibration index (ICI)。\n",
-  "   当前完整版计算ICI的bootstrap 95% CI；O:E ratio和calibration slope在脚本中也支持bootstrap CI输出。\n\n",
-  "本次设置：target time = ", target_time, " days；bootstrap次数 = ", B_boot, "；ICI bootstrap CI = ", CALCULATE_BOOTSTRAP_CI, "；验证集包括European hold-out set、Asian ancestry和Other ancestry。\n"
-)
-writeLines(readme, file.path(out_dir, "文件说明.txt"), useBytes = TRUE)
-
 cat("Done.\n")
 cat("Elapsed minutes:", round(difftime(Sys.time(), start_time, units = "mins"), 2), "\n")
 cat("Saved:", excel_file, "\n")

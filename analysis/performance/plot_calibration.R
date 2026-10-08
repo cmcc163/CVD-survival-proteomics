@@ -378,26 +378,4 @@ for (validation_name in validation_levels) {
   }
 }
 
-readme_path <- file.path(output_dir, "文件说明.txt")
-writeLines(
-  c(
-    "校准曲线图输出说明",
-    "",
-    "1. plot_calibration_3x3.R",
-    "   使用Calibration_metrics_R_bootstrap_validation_sets.xlsx中的校准曲线十分位数据和校准指标绘制3x3模型校准曲线图。",
-    "",
-    "2. 子文件夹",
-    "   European_holdout：欧洲hold-out验证集。",
-    "   Asian_ancestry：亚洲祖源验证集。",
-    "   Other_ancestry：其他祖源验证集。",
-    "",
-    "3. 图形内容",
-    "   每个验证集文件夹包含Total CVD、ASCVD和HF三个结局的3x3校准曲线图。",
-    "   模型顺序为PREVENT equation、Refitted Cox model、XGBoost、MLP、TabNet、NODE、FT-Transformer、SAINT、TabPFN。",
-    "   每个分面内的点为10等分风险组，虚线为理想校准线；左上角显示O:E ratio、calibration slope和ICI点估计。"
-  ),
-  readme_path,
-  useBytes = TRUE
-)
-
 cat("Calibration figures written to:", output_dir, "\n")

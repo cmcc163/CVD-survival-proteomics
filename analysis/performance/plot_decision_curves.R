@@ -423,26 +423,4 @@ for (validation_name in names(validations)) {
   }
 }
 
-writeLines(
-  c(
-    "临床效用DCA图输出说明",
-    "",
-    "1. plot_dca_curves.R",
-    "   使用saved_predictions中的prob_10yr、time和event计算并绘制10年decision curve analysis曲线。",
-    "",
-    "2. 输出结构",
-    "   European_holdout、Asian_ancestry、Other_ancestry三个子文件夹分别保存三个结局的3×3模型矩阵图。",
-    "   每个子图对应一个模型；子图内展示Treat all、Treat none、临床预测变量、蛋白标志物、临床+蛋白标志物的net benefit曲线。",
-    "   PREVENT equation仅展示临床预测变量曲线。",
-    "   每个子图右上角标注10%阈值下的net benefit及其bootstrap 95% CI。",
-    "",
-    "3. 图形口径",
-    "   阈值范围为0.5%-15%；虚线垂直线标记5%、7.5%和10%阈值。",
-    "   y轴下限固定为-0.01，以突出主要临床相关阈值区间内的net benefit差异。",
-    "   Net benefit采用10年IPCW删失处理；Treat all和Treat none作为参考策略。"
-  ),
-  file.path(output_root, "文件说明.txt"),
-  useBytes = TRUE
-)
-
 cat("DCA 3x3 model-matrix figures written to:", output_root, "\n")

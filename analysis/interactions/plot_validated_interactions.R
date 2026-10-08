@@ -300,15 +300,4 @@ if (openxlsx_available) {
 save_png_pdf(p_forest, "Figure_cox_interaction_top20_forest", width = 10.8, height = 6.1)
 save_png_pdf(p_priority, "Figure_cox_interaction_priority_scatter", width = 10.8, height = 4.4)
 
-plot_note <- c(
-  "Cox interaction Top20 plot notes",
-  "",
-  "1. Figure_cox_interaction_top20_forest shows the Cox multiplicative interaction HR and 95% CI for each Top20 TreeSHAP consensus interaction.",
-  "2. Point and confidence-interval colours indicate pair type; an asterisk marks within-outcome BH-FDR <= 0.05.",
-  "3. Figure_cox_interaction_priority_scatter maps TreeSHAP consensus interaction strength against Cox interaction FDR.",
-  "4. MMP12-related pairs and selected strong Cox-FDR pairs are directly labelled.",
-  "5. Only PNG and PDF outputs are generated."
-)
-writeLines(plot_note, file.path(output_dir, "cox_interaction_top20_plot_notes.txt"), useBytes = TRUE)
-
 cat("Wrote Cox interaction plots to:", output_dir, "\n")

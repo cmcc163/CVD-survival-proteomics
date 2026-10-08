@@ -265,52 +265,5 @@ ragg::agg_png(png_file, width = 183 / 25.4, height = 92 / 25.4, units = "in", re
 print(p)
 dev.off()
 
-notes_file <- Sys.getenv(
-  "SHAP_MAPLE_NOTES_FILE",
-  unset = file.path(output_dir, "文件说明.txt")
-)
-
-writeLines(
-  c(
-    "3.4 Integration of predictive importance and genetic evidence 文件说明",
-    "",
-    "1. build_shap_maple_ranked_protein_comparison.R",
-    "   生成 Figure_SHAP_MAPLE_ranked_protein_vs_FDR_CAD_Stroke_HF.png，并输出 SHAP_MAPLE_ranked_protein_comparison_CAD_Stroke_HF.xlsx。",
-    "   横轴为剔除临床变量后的 SHAP rank；纵轴为重新计算后的 -log10(FDR)，采用 pseudo-log 坐标以提高主体点可读性。",
-    "   CAD 和 Stroke 使用 ASCVD combined 模型的蛋白排名；HF 使用 HF combined 模型的蛋白排名。",
-    "   点大小固定；Significant by MAPLE 使用红色，Not significant 使用灰色；SuSiE 共定位阳性结果以黑色空心菱形标记。",
-    "",
-    "2. build_maple_volcano_CAD_Stroke_HF.R",
-    "   生成 Figure_MAPLE_volcano_CAD_Stroke_HF.png，并输出 MAPLE_volcano_source_data_CAD_Stroke_HF.xlsx。",
-    "   火山图横轴为 MAPLE effect，纵轴为重新计算后的 -log10(MAPLE FDR)；横轴和纵轴均采用 pseudo-log 坐标。",
-    "   火山图只展示 MAPLE 结果本身，不标注 SuSiE 共定位信息。",
-    "",
-    "3. MAPLE P 值和 FDR 更新口径",
-    "   原始 MAPLE 文件中部分 p_value 为 0，属于数值精度下溢。绘图和 Excel 输出均不再直接使用原始 p_value/fdr。",
-    "   使用 effect/se 计算 z 值，并用双侧正态检验重新计算 P 值：P = 2 * P(Z >= |effect/se|)。",
-    "   为避免极小 P 值再次下溢，脚本使用 R 的 pnorm(..., log.p = TRUE) 计算 log10(P)，再转换为数值 P。",
-    "   FDR 在 CAD、Stroke、HF 各结局内分别使用 Benjamini-Hochberg 方法重新计算。",
-    "   Excel 中保留原始 maple_p_original/maple_fdr_original，同时提供重算后的 maple_p/maple_fdr 以及科学计数法文本列 maple_p_scientific/maple_fdr_scientific。",
-    "",
-    "4. 输出文件",
-    "   Figure_SHAP_MAPLE_ranked_protein_vs_FDR_CAD_Stroke_HF.png：SHAP rank 与 MAPLE FDR 对比图。",
-    "   Figure_MAPLE_volcano_CAD_Stroke_HF.png：MAPLE 火山图。",
-    "   SHAP_MAPLE_ranked_protein_comparison_CAD_Stroke_HF.xlsx：rank 图源数据、汇总表、MAPLE 重算结果、SuSiE 共定位阳性结果和模型蛋白排名。",
-    "   MAPLE_volcano_source_data_CAD_Stroke_HF.xlsx：火山图源数据、标注点和汇总表。",
-    "   当前 figure 只保留 PNG 格式。",
-    "",
-    "5. 补充材料表格",
-    "   make_supplementary_maple_coloc_tables.py 生成 Supplementary_Table_MAPLE_and_SuSiE_colocalization.docx 和 Supplementary_Table_MAPLE_and_SuSiE_colocalization.xlsx。",
-    "   Supplementary Table 9 整理 Total CVD、ASCVD 和 HF prediction model 中全部非临床蛋白的 MAPLE 结果。",
-    "   Total CVD 模型蛋白匹配 CAD、Stroke 和 HF MAPLE endpoints；ASCVD 模型蛋白匹配 CAD 和 Stroke endpoints；HF 模型蛋白匹配 HF endpoint。",
-    "   Word 中的 Supplementary Table 9 只保留有 MAPLE 结果的 protein-endpoint pair；没有合适 SNP 或没有对应 MAPLE 结果的记录不进入 Word 主表，保存在 Excel 的 MAPLE omitted pairs sheet。",
-    "   Supplementary Table 10 按 coloc.susie 的 signal-pair summary 口径整理，只列出 CAD、Stroke 和 HF 中形成 signal-level SuSiE 比较的 pair。",
-    "   每个 outcome-exposure pair 展示 PP.H4 最大的同一个 signal pair，并报告 SNP from outcome、SNP from exposure、nsnps、PP.H0、PP.H1、PP.H2、PP.H3、PP.H4 和 interpretation。",
-    "   PP.H0-PP.H4 来自同一 selected signal pair；极小且数值下溢的 posterior probability 在 Word 表中显示为 <1.0e-300，原始数值保存在 Excel 的 SuSiE best H4 signal pair 和 SuSiE primary status sheets。"
-  ),
-  notes_file,
-  useBytes = TRUE
-)
-
 cat("Wrote:", png_file, "\n")
 print(summary_table)

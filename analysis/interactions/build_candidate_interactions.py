@@ -256,89 +256,6 @@ def plot_bubble(consensus):
     plt.close(fig)
 
 
-def make_report(consensus, category_model_summary, top_category_summary):
-    lines = []
-    lines.append("# Candidate predictor interactions")
-    lines.append("")
-    lines.append("## Recommended quantification")
-    lines.append("")
-    lines.append(
-        "Mean_Abs_Interaction is model-scale dependent, so the primary reported magnitude should be the within-model share of total off-diagonal pairwise interaction: pair mean absolute interaction divided by the sum of all i<j pairwise mean absolute interactions in the same outcome-model analysis. This preserves the ranking within each surrogate TreeSHAP analysis while avoiding direct comparison of raw interaction values across model families."
-    )
-    lines.append("")
-    lines.append(
-        "Across the seven all_lassonet models, describe each candidate pair using: mean and median interaction share (%), consensus rank, best model rank, and model support (number of models in which the pair is ranked in the top 20 or top 50). A conservative candidate definition is Top20 support in at least 2 models or Top50 support in at least 4 models."
-    )
-    lines.append("")
-    lines.append("## Top consensus interactions")
-    for outcome in OUTCOMES:
-        lines.append("")
-        lines.append(f"### {OUTCOME_LABELS[outcome]}")
-        sub = consensus[consensus["Outcome"] == outcome].head(10)
-        for row in sub.to_dict("records"):
-            lines.append(
-                f"- Rank {int(row['ConsensusRank'])}: {row['Pair']} ({row['PairType']}), mean share {row['MeanInteractionSharePct']:.3f}%, median share {row['MedianInteractionSharePct']:.3f}%, Top20 support {int(row['Top20ModelSupport'])}/7, Top50 support {int(row['Top50ModelSupport'])}/7."
-            )
-    lines.append("")
-    lines.append("## Results wording draft")
-    lines.append("")
-    lines.append(
-        "To identify candidate predictor interactions, we extracted the off-diagonal elements of the TreeSHAP interaction matrices from each all_lassonet model. Because absolute interaction values are expressed on model-specific surrogate output scales, we normalized each pairwise interaction by the total off-diagonal interaction strength within the corresponding outcome-model analysis. Candidate interactions were then prioritized by the mean normalized interaction share across seven model classes, with additional emphasis on recurrence among the top-ranked interactions within individual models."
-    )
-    lines.append("")
-    for outcome in OUTCOMES:
-        sub = consensus[consensus["Outcome"] == outcome].head(3)
-        pairs = "; ".join(
-            [
-                f"{r['Pair']} ({r['MeanInteractionSharePct']:.3f}%, Top20 support {int(r['Top20ModelSupport'])}/7)"
-                for r in sub.to_dict("records")
-            ]
-        )
-        lines.append(f"For {OUTCOME_LABELS[outcome]}, the leading interaction candidates were {pairs}.")
-    lines.append("")
-    lines.append("## Category-level notes")
-    lines.append("")
-    for outcome in OUTCOMES:
-        sub = top_category_summary[top_category_summary["Outcome"] == outcome]
-        pieces = [
-            f"{r['PairType']}: {int(r['Top50ConsensusPairs'])} top-50 pairs"
-            for r in sub.to_dict("records")
-        ]
-        lines.append(f"- {OUTCOME_LABELS[outcome]}: " + "; ".join(pieces) + ".")
-    (OUT_DIR / "candidate_interaction_reporting_notes.md").write_text("\n".join(lines), encoding="utf-8")
-
-
-def write_readme():
-    text = """3.5 Identification of candidate predictor interactions output notes
-
-1. build_candidate_interactions.py
-   Reads Mean_Abs_Interaction from SHAP_Raw_Data.xlsx for Total_CVD, ASCVD, and HF across seven all_lassonet models.
-   Diagonal entries are treated as main effects and excluded from pairwise interaction ranking.
-
-2. Candidate_predictor_interactions_all_lassonet.xlsx
-   model_pair_details: all i<j pairwise interactions for each outcome-model.
-   consensus_interactions: cross-model summary and consensus ranking for every pair.
-   top_consensus_interactions: top 50 consensus pairs per outcome.
-   robust_candidate_interactions: pairs with Top20 support in at least 2 models or Top50 support in at least 4 models.
-   pair_type_model_summary: model-level interaction share by pair type.
-   top50_pair_type_summary: pair-type composition among top 50 consensus pairs.
-
-3. Figures
-   plot_candidate_interactions.R regenerates the publication-style R figures.
-   Top10 and Top20 versions are exported separately for heatmap, bubble, and model-support figures.
-   Figure_candidate_interaction_heatmap_top10/top20 shows the top 10 or top 20 consensus pairs per outcome across all seven models.
-   Figure_candidate_interaction_bubble_top10/top20 shows the same top 10 or top 20 pairs, with point size indicating Top 10 or Top 20 model support, respectively.
-   Figure_candidate_interaction_model_support_top10/top20 shows whether each interaction entered the matching Top 10 or Top 20 within each model, using the same model order and encodings as the 3.2 discrimination figures.
-   Only PNG and PDF outputs are retained.
-
-4. Reporting
-   candidate_interaction_reporting_notes.md contains the suggested quantification strategy and draft result wording.
-   交互作用结果整理与写作建议.md provides the same core interpretation in Chinese, with a short English manuscript paragraph.
-   核心交互筛选与Cox验证策略.md explains how to combine seven-model interaction evidence with SHAP importance, MAPLE, SuSiE colocalization, and subsequent Cox multiplicative interaction testing.
-"""
-    (OUT_DIR / "文件说明.txt").write_text(text, encoding="utf-8")
-
-
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     metadata = read_feature_metadata()
@@ -368,8 +285,6 @@ def main():
         category_model_summary.to_excel(writer, sheet_name="pair_type_model_summary", index=False)
         top_category_summary.to_excel(writer, sheet_name="top50_pair_type_summary", index=False)
 
-    make_report(consensus, category_model_summary, top_category_summary)
-    write_readme()
     print(f"Wrote {output_xlsx}")
     print(f"Rows in model_pair_details: {len(detail):,}")
     print(f"Rows in consensus_interactions: {len(consensus):,}")

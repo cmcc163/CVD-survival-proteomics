@@ -484,30 +484,6 @@ write_outputs <- function(results) {
     theme(plot.title = element_text(face = "bold"))
   ggsave(file.path(out_dir, "bootstrap_significance_summary_heatmap.png"), p2, width = 8, height = 2.8, dpi = 300)
 
-  notes <- c(
-    "Paired individual-level bootstrap model comparison for European holdout only.",
-    "",
-    paste0("Bootstrap replicates: ", B),
-    paste0("Target time: ", target_time, " days"),
-    paste0("Net benefit threshold: ", threshold_nb),
-    "",
-    "For each outcome x feature-set task, the same bootstrap sample indices were used across SAINT and comparator models.",
-    "Difference definition: SAINT score - comparator score.",
-    "Positive differences favor SAINT.",
-    "",
-    "Direction-aligned scores:",
-    "  C-index: C-index",
-    "  OE_low and OE_high: -abs(log(O/E))",
-    "  ICI_all: -ICI",
-    "  NB_10pct: net benefit at the 10% threshold",
-    "",
-    "Risk strata for O/E were recalculated within each bootstrap sample using model-specific predicted 10-year risk halves.",
-    "Bootstrap p-values are two-sided percentile/sign p-values with a +1 continuity correction.",
-    "",
-    "Important note: prediction files do not contain participant IDs; paired alignment is based on row order after checking time/event equality against SAINT."
-  )
-  writeLines(notes, file.path(out_dir, "analysis_notes.txt"), useBytes = TRUE)
-
   invisible(list(pairwise = pairwise, metric_summary = metric_summary))
 }
 

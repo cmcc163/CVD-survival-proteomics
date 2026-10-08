@@ -273,28 +273,6 @@ saveWorkbook(wb, excel_out, overwrite = TRUE)
 write.csv(report_long, file.path(out_dir, "net_benefit_10yr_thresholds_long.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 write.csv(curve_long, file.path(out_dir, "dca_curve_10yr_data.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
-writeLines(
-  c(
-    "临床效用度数据输出说明",
-    "",
-    "1. calculate_clinical_utility_net_benefit.R",
-    "   使用saved_predictions中的time、event和prob_10yr计算10年decision curve analysis和Net Benefit。",
-    "",
-    "2. Supplementary_Table_net_benefit_10yr.xlsx",
-    "   包含Net Benefit长格式结果、补充表格式结果和DCA曲线数据。",
-    "",
-    "3. net_benefit_10yr_thresholds_long.csv",
-    "   5%、7.5%、10%干预阈值下的Net Benefit点估计和bootstrap 95% CI。",
-    "",
-    "4. dca_curve_10yr_data.csv",
-    "   0.5%-15%阈值范围内的10年DCA曲线数据。",
-    "",
-    "计算口径：10年事件状态采用IPCW处理删失；Net Benefit = TPR - FPR x threshold/(1-threshold)。当前结果为European hold-out set。"
-  ),
-  file.path(out_dir, "文件说明.txt"),
-  useBytes = TRUE
-)
-
 cat("Done.\n")
 cat("Elapsed minutes:", round(difftime(Sys.time(), start_time, units = "mins"), 2), "\n")
 cat("Saved:", excel_out, "\n")
