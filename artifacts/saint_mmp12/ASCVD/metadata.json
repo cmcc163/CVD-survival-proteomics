@@ -1,0 +1,82 @@
+{
+  "artifact": "SAINT-MMP12 five-fold survival ensemble",
+  "outcome": "ASCVD",
+  "feature_names": [
+    "age",
+    "hdl_cholesterol",
+    "non_hdl_cholesterol",
+    "average_SBP",
+    "eGFR",
+    "BMI",
+    "MMP12",
+    "sex",
+    "ever_smoked",
+    "Diabetes_baseline",
+    "hypertension_treatment",
+    "Cholesterol_treatment"
+  ],
+  "categorical_indices": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "categorical_dimensions": [
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "prediction_batch_size": 1024,
+  "best_params": {
+    "dim": 8,
+    "depth": 1,
+    "heads": 8,
+    "dropout": 0.6118449880511023
+  },
+  "study_name": "SAINT_UKB_ASCVD_MMP12",
+  "n_trials": 20,
+  "best_trial_number": 12,
+  "best_value": 0.7355333878671191,
+  "preprocessing_available": false,
+  "baseline_hazard_available": false,
+  "provenance": "Original best-fold checkpoints; old directory labels are not predictor labels",
+  "validation": {
+    "strict_state_dict_load": true,
+    "synthetic_log_risk_finite": true
+  },
+  "files": [
+    {
+      "path": "optuna_best_params.db",
+      "sha256": "e0ed542f292fa23ddda428948411426b3d6a57c0af3b53416aa083514869549a",
+      "bytes": 122880
+    },
+    {
+      "path": "models/fold_0.pt",
+      "sha256": "39450660e818473b9f2ff21dec2c99b82dfcdedc45821e96e078bbdd601ee553",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_1.pt",
+      "sha256": "2e1a3d8138450c2b9f8f24cec93740ee5e47c6fb6020ba230bba3e85431eb04f",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_2.pt",
+      "sha256": "c8e68f8b1896298450f943a942a3f7891790e71b04fc6212e415b1e7837a7f2f",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_3.pt",
+      "sha256": "bea142ea9e94a1251b37b90308977cf717f4bf1b26467ac3df73e9510927867b",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_4.pt",
+      "sha256": "47c196c23b707ff71fa862449206248ec7510bb869a40847dbaab0c828c6c522",
+      "bytes": 1489253
+    }
+  ]
+}

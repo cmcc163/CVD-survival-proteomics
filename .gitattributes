@@ -8,3 +8,6 @@ artifacts/optuna/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
 artifacts/rp_saint/**/*.pt filter=lfs diff=lfs merge=lfs -text
 artifacts/rp_saint/**/*.pkl filter=lfs diff=lfs merge=lfs -text
 artifacts/rp_saint/**/*.db filter=lfs diff=lfs merge=lfs -text
+artifacts/saint_mmp12/**/*.pt filter=lfs diff=lfs merge=lfs -text
+artifacts/saint_mmp12/**/*.pkl filter=lfs diff=lfs merge=lfs -text
+artifacts/saint_mmp12/**/*.db filter=lfs diff=lfs merge=lfs -text

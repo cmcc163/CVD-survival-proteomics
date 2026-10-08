@@ -1,0 +1,82 @@
+{
+  "artifact": "SAINT-MMP12 five-fold survival ensemble",
+  "outcome": "Total_CVD",
+  "feature_names": [
+    "age",
+    "hdl_cholesterol",
+    "non_hdl_cholesterol",
+    "average_SBP",
+    "eGFR",
+    "BMI",
+    "MMP12",
+    "sex",
+    "ever_smoked",
+    "Diabetes_baseline",
+    "hypertension_treatment",
+    "Cholesterol_treatment"
+  ],
+  "categorical_indices": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "categorical_dimensions": [
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "prediction_batch_size": 1024,
+  "best_params": {
+    "dim": 8,
+    "depth": 1,
+    "heads": 8,
+    "dropout": 0.5455389096028755
+  },
+  "study_name": "SAINT_UKB_Total_CVD_MMP12",
+  "n_trials": 20,
+  "best_trial_number": 18,
+  "best_value": 0.7564483828889912,
+  "preprocessing_available": false,
+  "baseline_hazard_available": false,
+  "provenance": "Original best-fold checkpoints; old directory labels are not predictor labels",
+  "validation": {
+    "strict_state_dict_load": true,
+    "synthetic_log_risk_finite": true
+  },
+  "files": [
+    {
+      "path": "optuna_best_params.db",
+      "sha256": "9f4b6a1969700116c74060b23b00dd30ce3c11474c08aef22708813c105bcb2d",
+      "bytes": 122880
+    },
+    {
+      "path": "models/fold_0.pt",
+      "sha256": "47a249e8b872fcdeef68da8a1b6aa8a47d5a684f14b14b2cb0c29b028eebe71b",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_1.pt",
+      "sha256": "37723811758023f9b39afa8349ae2b009441818bfd602ca0f33684d0dff9c850",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_2.pt",
+      "sha256": "28cb8211e3f3012f97beb68337fc43bea2472f6da8623430171b2dd52c11dd2f",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_3.pt",
+      "sha256": "4c1059ce834ea58a3e3fd7a25f2ff34ea18cd6b75e74b7397fcdb6939bcd7dc9",
+      "bytes": 1489253
+    },
+    {
+      "path": "models/fold_4.pt",
+      "sha256": "b712c6c85a4d8fd6e32ff2c074c4578abc7d765590f5c0f1606ab998de3a5f0c",
+      "bytes": 1489253
+    }
+  ]
+}

@@ -75,4 +75,6 @@ artifacts/*
 !artifacts/optuna/**
 !artifacts/rp_saint/
 !artifacts/rp_saint/**
+!artifacts/saint_mmp12/
+!artifacts/saint_mmp12/**
 
