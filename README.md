@@ -55,7 +55,7 @@ Downstream manuscript analyses are under `analysis/`. [MAPLE/SuSiE scripts](gene
 - `artifacts/models/`: five-fold main-analysis models.
 - `artifacts/optuna/`: corresponding Optuna studies.
 - `artifacts/rp_saint/`: RP-SAINT weights, preprocessors, Breslow estimators, and validation metadata.
-- [`artifacts/saint_mmp12/`](artifacts/saint_mmp12/README.md): SAINT with eleven clinical predictors plus MMP12; five-fold weights and Optuna studies for each outcome.
+- `artifacts/saint_mmp12/`: SAINT with eleven clinical predictors plus MMP12; five-fold weights and Optuna studies for each outcome.
 
 The release contains 360 main-analysis fold models and 72 corresponding Optuna databases, plus 15 RP-SAINT and 15 SAINT-MMP12 fold models. SAINT-MMP12 includes three additional Optuna studies. RP-SAINT predictions reproduce the historical results to floating-point precision. Binary artifacts are managed with Git LFS.
 

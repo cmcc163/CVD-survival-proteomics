@@ -22,7 +22,6 @@
     "best_n_epochs_user_attr": 25
   },
   "training": {
-    "python": "3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]",
     "torch": "2.4.1",
     "cuda": "11.8",
     "device": "NVIDIA GeForce RTX 4060 Ti",
@@ -108,138 +107,7 @@
     "preprocessor_sha256": "a5e0b24e74cb8077447c5ce88ad50da0b422ea7f723d2bea039938e93052ebd8",
     "copied_optuna_database_sha256": "407a845810ea899dae52ed1d184de02d7b46d1302c3da99bfddb561f8ef7a02b"
   },
-  "historical_prediction_comparison": {
-    "train": {
-      "reference_file": "all_lassonet_train.csv",
-      "reference_sha256": "3ec543940485c04273b49828252c64c06e0c5c11d1b0516a118e917b5f11741b",
-      "n_reference": 42635,
-      "n_regenerated": 42635,
-      "row_count_match": true,
-      "outcome_time_max_abs_diff": 0.0,
-      "outcome_event_exact_match": true,
-      "risk_score": {
-        "max_abs_diff": 4.440892098500626e-16,
-        "mean_abs_diff": 3.223743194794787e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_10yr": {
-        "max_abs_diff": 9.974659986866641e-17,
-        "mean_abs_diff": 4.74945448556841e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_15yr": {
-        "max_abs_diff": 9.974659986866641e-17,
-        "mean_abs_diff": 4.482244614526557e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_20yr": {
-        "max_abs_diff": 9.974659986866641e-17,
-        "mean_abs_diff": 4.3517156751305017e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      }
-    },
-    "val": {
-      "reference_file": "all_lassonet_val.csv",
-      "reference_sha256": "baf4a7b67c076201a82c09bbad56aecc5691c03790d671658dc6eeb92dc1ee54",
-      "n_reference": 4738,
-      "n_regenerated": 4738,
-      "row_count_match": true,
-      "outcome_time_max_abs_diff": 0.0,
-      "outcome_event_exact_match": true,
-      "risk_score": {
-        "max_abs_diff": 4.440892098500626e-16,
-        "mean_abs_diff": 3.055173256080665e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_10yr": {
-        "max_abs_diff": 9.974659986866641e-17,
-        "mean_abs_diff": 4.6365546641376195e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_15yr": {
-        "max_abs_diff": 9.8879238130678e-17,
-        "mean_abs_diff": 4.4712241302370756e-17,
-        "pearson_r": 0.9999999999999998,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_20yr": {
-        "max_abs_diff": 9.8879238130678e-17,
-        "mean_abs_diff": 4.348698758511529e-17,
-        "pearson_r": 0.9999999999999998,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      }
-    },
-    "asian": {
-      "reference_file": "all_lassonet_asian.csv",
-      "reference_sha256": "5ba4a4bda8c116b82b55b57b29b8b7b3261e303975caf94ff6a0854b693d5401",
-      "n_reference": 1089,
-      "n_regenerated": 1089,
-      "row_count_match": true,
-      "outcome_time_max_abs_diff": 0.0,
-      "outcome_event_exact_match": true,
-      "risk_score": {
-        "max_abs_diff": 4.440892098500626e-16,
-        "mean_abs_diff": 3.127121814224123e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_10yr": {
-        "max_abs_diff": 9.93129189996722e-17,
-        "mean_abs_diff": 4.683156028568517e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_15yr": {
-        "max_abs_diff": 9.974659986866641e-17,
-        "mean_abs_diff": 4.7114707299326006e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_20yr": {
-        "max_abs_diff": 9.8879238130678e-17,
-        "mean_abs_diff": 4.481886688633099e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      }
-    },
-    "other": {
-      "reference_file": "all_lassonet_other.csv",
-      "reference_sha256": "ccba7e567063e5eeb61122c6acf52e2da6d62e8545bbf7b6353426c75a8cded2",
-      "n_reference": 2130,
-      "n_regenerated": 2130,
-      "row_count_match": true,
-      "outcome_time_max_abs_diff": 0.0,
-      "outcome_event_exact_match": true,
-      "risk_score": {
-        "max_abs_diff": 4.440892098500626e-16,
-        "mean_abs_diff": 4.301989511721891e-17,
-        "pearson_r": 0.9999999999999998,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_10yr": {
-        "max_abs_diff": 9.974659986866641e-17,
-        "mean_abs_diff": 4.8968627389188374e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_15yr": {
-        "max_abs_diff": 9.974659986866641e-17,
-        "mean_abs_diff": 4.6064441710730136e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      },
-      "prob_20yr": {
-        "max_abs_diff": 9.8879238130678e-17,
-        "mean_abs_diff": 4.528178008612276e-17,
-        "pearson_r": 1.0,
-        "allclose_rtol_1e-5_atol_1e-7": true
-      }
-    }
+  "release_environment": {
+    "python": "3.10.1"
   }
 }

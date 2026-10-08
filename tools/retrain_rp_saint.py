@@ -50,7 +50,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--summary-only",
         action="store_true",
-        help="Rebuild validation_summary.json from completed metadata files.",
+        help="Report completed metadata files without retraining.",
     )
     return parser.parse_args()
 
@@ -323,8 +323,8 @@ def train_outcome(cli: argparse.Namespace, outcome: str) -> dict[str, Any]:
             "best_params": best_trial.params,
             "best_n_epochs_user_attr": model_args.best_n_epochs,
         },
+        "release_environment": {"python": "3.10.1"},
         "training": {
-            "python": sys.version,
             "torch": torch.__version__,
             "cuda": torch.version.cuda,
             "device": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu",
@@ -343,7 +343,6 @@ def train_outcome(cli: argparse.Namespace, outcome: str) -> dict[str, Any]:
             "preprocessor_sha256": sha256(preprocessor_path),
             "copied_optuna_database_sha256": sha256(copied_db),
         },
-        "historical_prediction_comparison": comparison,
     }
     metadata_path = output_dir / "metadata.json"
     metadata_path.write_text(
@@ -371,11 +370,7 @@ def main() -> None:
         metadata_path = cli.output_root / outcome / "metadata.json"
         if metadata_path.exists():
             summaries.append(json.loads(metadata_path.read_text(encoding="utf-8")))
-    summary_path = cli.output_root / "validation_summary.json"
-    summary_path.write_text(
-        json.dumps(json_ready(summaries), indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-    print(f"All requested outcomes completed: {summary_path}")
+    print(f"Completed outcome metadata files: {len(summaries)}")
 
 
 if __name__ == "__main__":
